@@ -8,12 +8,12 @@
 
 ---
 
-- Full Typescript support
-- Dark & Light mode support
-- French & English languages support
-- Schedule view with three types : 'event', 'temperature' & 'calendar'
+- Full **Typescript** support
+- **Dark & Light** mode support
+- **French & English** languages support
+- Schedule view with three types : **'event'**, **'temperature'** & **'calendar'**
 - made with react, react-router-dom, tailwindcss & recoil
-- With only one peer dependency other than react & react-dom -> react-router-dom
+- With only one peer dependency other than react & react-dom -> **react-router-dom**
 
 ---
 
@@ -793,14 +793,21 @@ const HomePage = () => {
 export default HomePage;
 
 ```
+## Contributing
 
+Contributions to `react-simple-schedule-viewer` are welcome! If you have any issues, feature requests, or improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/rodolphe37/react-simple-schedule-viewer). Your feedback and support are highly appreciated!
 
-## Contributions Welcome!
+### Reporting Issues
 
-```shell
-git clone https://github.com/rodolphe37/react-simple-schedule-viewer
-```
+If you encounter any problems while using the library, please open an issue on GitHub. Provide as much detail as possible, including steps to reproduce the issue and any relevant code or screenshots.
+
+### Feature Requests
+
+Have an idea for a new feature? Please open an issue with a detailed description of the feature you'd like to see, and why it would be useful.
+
+Thank you for your interest in contributing to `react-simple-schedule-viewer`!
+
 
 ## License
 
-The ISC License.
+The MIT License.
