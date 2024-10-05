@@ -1,0 +1,38 @@
+.SelectField {
+  width: 100%;
+}
+
+.Label {
+  margin: 0 0 0.5rem;
+}
+
+select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 4rem;
+}
+
+select:focus {
+  border-color: #000;
+  outline: 0;
+}
+
+.styledSelect {
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 15px;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+.styled-select select {
+  background: transparent;
+  -webkit-appearance: none;
+  width: 100px;
+  font-size: 11px;
+  border: 0;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

@@ -1,0 +1,100 @@
+{
+  "name": "react-simple-schedule-viewer",
+  "version": "0.10.0",
+  "description": "📅 An easy configurable weekly Calendar viewer component with three types: events, temperature, and calendar. 📅",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/types/index.d.ts",
+        "default": "./lib/esm/index.mjs"
+      },
+      "require": {
+        "types": "./lib/cjs/types/index.d.ts",
+        "default": "./lib/cjs/index.js"
+      }
+    }
+  },
+  "types": "./lib/cjs/types/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "clean": "rimraf lib/",
+    "build:css": "tailwindcss -o lib/esm/assets/css/index.css --minify && tailwindcss -o lib/cjs/assets/css/index.css --minify",
+    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css lib/esm && copyfiles -u 1 src/**/*.html src/**/*.css lib/cjs",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs  && yarn copy-files",
+    "build:esm": "tsc -p ./configs/tsconfig.esm.json && move-file lib/esm/index.js lib/esm/index.mjs",
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "test": "mocha",
+    "semantic-release": "semantic-release",
+    "prepack": "yarn build"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodolphe37/react-simple-schedule-viewer.git"
+  },
+  "keywords": [
+    "typescript",
+    "react",
+    "Calendar",
+    "events",
+    "temperature",
+    "schedule",
+    "rodolphe37",
+    "tailwindcss",
+    "dark/light mode support",
+    "multilanguages support"
+  ],
+  "author": {
+    "name": "rodolphe Augusto",
+    "email": "rodolphe.a@gmail.com",
+    "url": "https://github.com/rodolphe37"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodolphe37/react-simple-schedule-viewer/issues"
+  },
+  "homepage": "https://github.com/rodolphe37/react-simple-schedule-viewer#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "chai": "^4.3.6",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.0.0",
+    "mocha": "^10.0.0",
+    "move-file-cli": "^3.0.0",
+    "postcss": "^8.4.47",
+    "rimraf": "^6.0.1",
+    "semantic-release": "^19.0.3",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.7.0",
+    "typescript": "^4.7.4",
+    "recoil": "^0.7.7",
+    "tailwindcss": "^3.4.13",
+    "react-error-boundary": "^4.0.13"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "recoil": "^0.7.7",
+    "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  }
+}
