@@ -5,6 +5,7 @@
 ## Movie demo
 📅 An easy configurable weekly Calendar viewer component.
 
+> ![demo movie](demo/demo.mov)
 <video width="500" height="300" controls>
   <source src="demo/demo.mov" type="video/mp4">
 </video>
