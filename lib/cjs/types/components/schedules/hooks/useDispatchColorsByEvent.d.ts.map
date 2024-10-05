@@ -1,0 +1,1 @@
+{"version":3,"file":"useDispatchColorsByEvent.d.ts","sourceRoot":"","sources":["../../../../../../src/components/schedules/hooks/useDispatchColorsByEvent.ts"],"names":[],"mappings":"AAAA,OAAO,EAAc,cAAc,EAAE,MAAM,UAAU,CAAC;AAEtD,QAAA,MAAM,wBAAwB;uBAIV,KAAK,cAAc,EAAE,eAAe,CAAC;qBACtC,KAAK,cAAc,EAAE,eAAe,CAAC;;;;CAuCvD,CAAC;AAEF,eAAe,wBAAwB,CAAC"}

@@ -1,0 +1,94 @@
+.custom--dropdown-container {
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom--dropdown-container .dropdown-input {
+  padding: 7px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  gap: 7px;
+  height: 3rem;
+}
+
+.custom--dropdown-container
+  .dropdown-input
+  .dropdown-selected-value.placeholder {
+  font-weight: 600;
+}
+
+.custom--dropdown-container .dropdown-tool svg {
+  transition: all 0.2s ease-in-out;
+}
+
+.custom--dropdown-container .dropdown-tool svg.translate {
+  transform: rotate(180deg);
+}
+
+.custom--dropdown-container .dropdown-menu {
+  width: 100%;
+  padding: 5px;
+  position: absolute;
+  transform: translateY(6px);
+  border-radius: 6px;
+  overflow: auto;
+  z-index: 99;
+  max-height: 312px;
+  min-height: 50px;
+}
+.custom--dropdown-container .dropdown-menu {
+  border: 1px solid #dbdbdb;
+  background-color: #edf0f7;
+}
+:is(.dark) .custom--dropdown-container .dropdown-menu {
+  border: 1px solid rgb(100 116 139);
+
+}
+
+.custom--dropdown-container .dropdown-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom--dropdown-container .dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom--dropdown-container .dropdown-menu::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.custom--dropdown-container .dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.custom--dropdown-container .dropdown-menu.alignment--left {
+  left: 0;
+}
+
+.custom--dropdown-container .dropdown-menu.alignment--right {
+  right: 0;
+}
+
+.custom--dropdown-container .dropdown-item {
+  padding: 7px 10px;
+  cursor: pointer;
+  transition: background-color 0.35s ease;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.custom--dropdown-container .dropdown-item:hover {
+  background-color: #fff;
+}
+:is(.dark) .custom--dropdown-container .dropdown-item:hover {
+  background-color: #1a202c;
+}
+
+.custom--dropdown-container .dropdown-item.selected {
+  background-color: rgba(255, 115, 0, 0.075);
+  color: rgb(37, 99, 235);
+  font-weight: 600;
+}
