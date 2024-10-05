@@ -1,5 +1,7 @@
 [![npm](https://img.shields.io/npm/v/react-simple-schedule-viewer)](https://www.npmjs.com/package/react-simple-schedule-viewer) ![downloads](https://img.shields.io/npm/dt/react-simple-schedule-viewer?color=blue&logo=npm&logoColor=blue)
 
+# WORK IN PROGRESS...
+
 # React simple schedule viewer
 
 📅 An easy configurable weekly Calendar viewer component.
@@ -107,69 +109,14 @@ yarn add react-simple-schedule-viewer
 >
 > [Link to the complete 24h values by 15 mins range ](./HOURSRANGE.md "full range of value from 0 to 1440")
 
-### 24 hours format (light & dark)
+### Event type calendar view
 
-![24 hours format](demo/24h_format.png)
 
-```javascript
-import React, { useState } from 'react';
-import { TimePicker } from 'react-wheel-time-picker';
-
-export default const  App = () => {
-    const [value, setValue] = useState('12:00');
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    const onChange = (timeValue: string) => {
-    setValue(timeValue);
-    };
-
-   return (
-      <div>
-        <TimePicker
-            label="Start time"
-            isDarkMode={isDarkMode}
-            onChange={onChange}
-            value={value}
-        />
-      </div>
-   );
-}
-```
-
-### 12 hours format (light & dark)
-
-![12 hours format](demo/12h_format.png)
-
-```js
-import React, { useState } from 'react';
-import { TimePicker } from 'react-wheel-time-picker';
-
-export default const  MyApp = () => {
-    const [value, setValue] = useState('10:00 AM');
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    const onChange = (timeValue) => {
-        setValue(timeValue);
-    }
-
-   return (
-      <div>
-        <TimePicker
-            use12Hours
-            label="Start time"
-            isDarkMode={isDarkMode}
-            onChange={onChange}
-            value={value}
-        />
-      </div>
-   );
-}
-```
 
 ## Contributions Welcome!
 
 ```shell
-git clone https://github.com/rodolphe37/react-wheel-time-picker
+git clone https://github.com/rodolphe37/react-simple-schedule-viewer
 ```
 
 ## License
