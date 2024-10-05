@@ -141,7 +141,7 @@ const Calendar = ({
                               height: 7,
                               background: "red",
                               position: "absolute",
-                              top: "23px",
+                              top: "3px",
                               right: "50%",
                               borderRadius: "100px",
                             }}

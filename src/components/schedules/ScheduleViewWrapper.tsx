@@ -74,7 +74,7 @@ const ScheduleViewWrapper = ({
   const firstElement = schedulesList.find((res) => res.id)?.id;
 
   useLayoutEffect(() => {
-    if (!withList && scheduleId === undefined) {
+    if (!withList && firstElement && scheduleId === undefined) {
       navigate(`/schedule/${firstElement}`);
     }
     if (isBadId) {
