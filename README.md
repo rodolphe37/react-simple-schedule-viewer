@@ -14,6 +14,7 @@
 - Dark & Light mode support
 - Schedule with three types : 'event', 'temperature' & 'calendar'
 - made with react-router-dom, tailwindcss & recoil
+- With only one dependency other than react & react-dom -> react-router-dom
 
 ### Live demo
 

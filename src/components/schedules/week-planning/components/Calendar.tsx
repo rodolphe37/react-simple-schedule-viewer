@@ -24,7 +24,7 @@ interface ICalendarProps {
   scheduleIdentifier: string;
   isInDarkMode: boolean;
   eventTypeData: TeventTypeData;
-  locale: string;
+  locale: "fr" | "en";
   modalContent?: TContentForModal;
   withDays?: boolean;
   colorCellByEvents: Omit<TeventTypeData, "eventPlace_id">;
@@ -109,7 +109,7 @@ const Calendar = ({
                               height: 7,
                               background: "red",
                               position: "absolute",
-                              top: "23px",
+                              top: "3px",
                               right: "50%",
                               borderRadius: "100px",
                             }}

@@ -24,7 +24,7 @@ type TCellEventsInfoModalProps = {
   day: number;
   eventInstructionTextWithoutWhiteSpace: string;
   isInDarkMode?: boolean;
-  locale: string;
+  locale: "fr" | "en";
   modalContentForDisplaying:
     | {
         id: string;

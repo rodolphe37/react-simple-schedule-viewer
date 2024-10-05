@@ -6,7 +6,7 @@ declare const ScheduleViewWrapper: ({ scheduleByEventPlace, weekStartsOn, isInDa
     isInDarkMode: boolean;
     withList?: boolean | undefined;
     eventTypeData: TeventTypeData;
-    locale: string;
+    locale: "fr" | "en";
     modalContent?: TContentForModal | undefined;
     withDays?: boolean | undefined;
     colorCellByEvents: Omit<TeventTypeData, "eventPlace_id">;

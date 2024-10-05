@@ -13,7 +13,7 @@ type eventWithNewNamesProps = {
     originalKey: string;
     value: number | string | null;
 }[];
-declare const useGetEventTypeController: (eventTypeData: TeventTypeData, locale: string, eventsName?: TeventsName, eventsNameUs?: TeventsName) => {
+declare const useGetEventTypeController: (eventTypeData: TeventTypeData, locale: "fr" | "en", eventsName?: TeventsName, eventsNameUs?: TeventsName) => {
     errorResponse: ErrorResponse;
     eventType: eventTypeArray;
     error: boolean;

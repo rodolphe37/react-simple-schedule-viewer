@@ -14,7 +14,7 @@ const SchedulesDetails = ({
   withListReturnButton
 }: {
   scheduleByEventPlace: getSchedulesByEventPlaceIdResponse;
-  locale: string;
+  locale: "fr" | "en";
   isDarkMode?: boolean;
   withListButtonName?: string;
   withListButtonNameUs?: string;

@@ -6,7 +6,7 @@ declare const WeekPlanning: ({ scheduleIdentifier, scheduleByEventPlace, weekSta
     weekStartsOn: 0 | 1 | 2 | 3 | 4 | 5 | 6 | undefined;
     isInDarkMode?: boolean | undefined;
     eventTypeData: TeventTypeData;
-    locale: string;
+    locale: "fr" | "en";
     modalContent?: TContentForModal | undefined;
     withDays?: boolean | undefined;
     colorCellByEvents: Omit<TeventTypeData, "eventPlace_id">;

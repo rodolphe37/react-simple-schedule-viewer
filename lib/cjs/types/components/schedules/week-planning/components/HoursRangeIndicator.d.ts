@@ -3,7 +3,7 @@ type THoursRangeIndicatorProps = {
     rangebyFifteenMinutes: string[];
     eventIdToDisplay: TEventToDisplay;
     isInDarkMode?: boolean;
-    locale: string;
+    locale: "fr" | "en";
 };
 declare const HoursRangeIndicator: ({ rangebyFifteenMinutes, eventIdToDisplay, isInDarkMode, locale, }: THoursRangeIndicatorProps) => import("react/jsx-runtime").JSX.Element;
 export default HoursRangeIndicator;

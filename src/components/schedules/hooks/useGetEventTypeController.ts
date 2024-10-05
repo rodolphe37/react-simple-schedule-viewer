@@ -20,7 +20,7 @@ type eventWithNewNamesProps = {
 
 const useGetEventTypeController = (
   eventTypeData: TeventTypeData,
-  locale: string,
+  locale: "fr" | "en",
   eventsName?: TeventsName,
   eventsNameUs?: TeventsName
 ) => {

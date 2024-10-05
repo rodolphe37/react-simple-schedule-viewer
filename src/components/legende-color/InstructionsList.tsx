@@ -19,7 +19,7 @@ const InstructionsList = ({
   };
   colorCellByEvents: Omit<TeventTypeData, "eventPlace_id">;
   eventsTextColor: Omit<TeventTypeData, "eventPlace_id">;
-  locale: string;
+  locale: "fr" | "en";
   scheduleTypeByScheduleId: string | undefined;
 }) => {
   const { colorCellByTemp, textEventColorInCell } = useDispatchColorsByEvent({

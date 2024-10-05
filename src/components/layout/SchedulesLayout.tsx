@@ -48,7 +48,7 @@ import React from "react";
   isInDarkMode: boolean;
   colorCellByEvents: Omit<typeof eventTypeData, "eventPlace_id">;
   eventsTextColor: Omit<typeof eventTypeData, "eventPlace_id">;
-  locale: string;
+  locale: "fr" | "en";
   eventsName?: TeventsName;
   eventsNameUs?: TeventsName;
   eventTypeData: {

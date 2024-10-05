@@ -27,7 +27,7 @@ const WeekPlanning = ({
   weekStartsOn: 0 | 1 | 2 | 3 | 4 | 5 | 6 | undefined;
   isInDarkMode?: boolean;
   eventTypeData: TeventTypeData;
-  locale: string;
+  locale: "fr" | "en";
   modalContent?: TContentForModal;
   withDays?: boolean;
   colorCellByEvents: Omit<typeof eventTypeData, "eventPlace_id">;

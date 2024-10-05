@@ -37,7 +37,7 @@ declare const SchedulesLayout: ({ scheduleByEventPlace, weekStartsOn, isInDarkMo
         eventType_6: number | string;
         eventType_7?: string | number | undefined;
     }, "eventPlace_id">;
-    locale: string;
+    locale: "fr" | "en";
     eventsName?: TeventsName | undefined;
     eventsNameUs?: TeventsName | undefined;
     eventTypeData: {

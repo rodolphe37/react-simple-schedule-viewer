@@ -20,7 +20,7 @@ const ParametersDetails = ({
 }: {
   eventTypeData: TeventTypeData;
   isInDarkMode: boolean;
-  locale: string;
+  locale: "fr" | "en";
   colorCellByEvents: Omit<typeof eventTypeData, "eventPlace_id">;
   eventsTextColor: Omit<typeof eventTypeData, "eventPlace_id">;
   eventsName?: TeventsName;

@@ -32,7 +32,7 @@ export interface CellEventProps {
   setEventIdToDisplay: SetterOrUpdater<TEventToDisplay>;
   isInDarkMode?: boolean;
   eventTypeData: TeventTypeData;
-  locale: string;
+  locale: "fr" | "en";
   modalContent?: TContentForModal;
   scheduleIdentifier: string;
   eventArray: EventType[] | undefined;
@@ -57,7 +57,7 @@ export interface CellProps {
     | undefined;
   isInDarkMode?: boolean;
   eventTypeData: TeventTypeData;
-  locale: string;
+  locale: "fr" | "en";
   modalContent?: TContentForModal;
   scheduleIdentifier: string;
   events: EventType[] | undefined;

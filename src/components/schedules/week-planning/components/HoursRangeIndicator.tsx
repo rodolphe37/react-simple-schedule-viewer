@@ -12,7 +12,7 @@ type THoursRangeIndicatorProps = {
   rangebyFifteenMinutes: string[];
   eventIdToDisplay: TEventToDisplay;
   isInDarkMode?: boolean;
-  locale: string;
+  locale: "fr" | "en";
 };
 
 const HoursRangeIndicator = ({
