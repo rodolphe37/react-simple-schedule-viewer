@@ -8,7 +8,7 @@ import "./assets/css/customSelect.css";
 import SchedulesLayout from "./components/layout/SchedulesLayout";
 import { TeventsName } from "./components/schedules/types";
 
-export function Schedule({
+function Schedule({
   scheduleByEventPlace = { schedules: [] },
   weekStartsOn = 0,
   isInDarkMode = false,

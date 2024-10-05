@@ -6,7 +6,7 @@ import "./assets/css/Label.module.css";
 import "./assets/css/SelectBox.css";
 import "./assets/css/customSelect.css";
 import { TeventsName } from "./components/schedules/types";
-export declare function Schedule({ scheduleByEventPlace, weekStartsOn, isInDarkMode, colorCellByEvents, eventsTextColor, locale, eventsNameUs, eventsName, eventTypeData, modalContent, withDays, withList, withListButtonName, withListButtonNameUs, withListReturnButton, }: {
+declare function Schedule({ scheduleByEventPlace, weekStartsOn, isInDarkMode, colorCellByEvents, eventsTextColor, locale, eventsNameUs, eventsName, eventTypeData, modalContent, withDays, withList, withListButtonName, withListButtonNameUs, withListReturnButton, }: {
     scheduleByEventPlace: {
         schedules: {
             id: string;
