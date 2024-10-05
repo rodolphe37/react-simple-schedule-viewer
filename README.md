@@ -103,11 +103,11 @@ yarn add react-simple-schedule-viewer
 
 > ### important
 >
-> > the time value expected is only in minutes from 0 to 1440.
+> > ### the time value expected is only in minutes from 0 to 1440.
+> >
+> > ### the expected range is by 15 min intervals only
 >
-> > the expected range is by 15 min intervals only
->
-> [Link to the complete 24h values by 15 mins range ](./HOURSRANGE.md "full range of value from 0 to 1440")
+> > > #### [Link to the complete 24h values by 15 mins range ](./HOURSRANGE.md "full range of value from 0 to 1440")
 
 ### Event type calendar view
 
