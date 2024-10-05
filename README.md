@@ -2,21 +2,17 @@
 
 # React simple schedule viewer
 
-## Movie demo
 📅 An easy configurable weekly Calendar viewer component.
 
-> ![demo movie](demo/demo.mov)
-<video width="500" height="300" controls>
-  <source src="demo/demo.mov" type="video/mp4">
-</video>
-
-
+--- 
 - Full Typescript support
 - Dark & Light mode support
 - French & English languages support
 - Schedule view with three types : 'event', 'temperature' & 'calendar'
 - made with react-router-dom, tailwindcss & recoil
 - With only one peer dependency other than react & react-dom -> react-router-dom
+
+---
 
 ### Live demo
 
@@ -43,10 +39,6 @@ yarn add react-simple-schedule-viewer
 >
 > English - Light & Dark mode
 > ![French - Light](demo/pictures/event-en-light.png)
->
-> > <video width="400" height="200" controls>
-> >  <source src="demo/movies/event-modal.mov" type="video/> mp4">
-> > </video>
 
 > ### Temperature type:
 >
