@@ -112,8 +112,8 @@ yarn add react-simple-schedule-viewer
 ### Event type calendar view
 
 ```javascript
+// components/ScheduleEvent.tsx
 import { Suspense, useEffect, useState } from "react";
-import "../../App.css";
 import { Route, Routes } from "react-router-dom";
 import { useTheme } from "../../useTheme";
 import {
@@ -126,7 +126,7 @@ import { contentForModal } from "../../dataCards";
 
 import Schedule from "react-simple-schedule-viewer";
 
-function ScheduleTemp() {
+function ScheduleEvent() {
   //  Variables for the Schedule component
   const weekStartsOn = 0;
   const { theme, setTheme } = useTheme();
@@ -175,6 +175,7 @@ function ScheduleTemp() {
     eventType_7: "daily appointment",
   };
 
+// Just for the demo
   useEffect(() => {
     if (isDarkMode) {
       setTheme("dark");
@@ -188,7 +189,7 @@ function ScheduleTemp() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
-          path="/schedule/*"
+          path="/schedule/*" // The path must be /schedule/*
           element={
             <Suspense fallback={<div>Loading...</div>}>
               <Schedule
@@ -209,8 +210,212 @@ function ScheduleTemp() {
   );
 }
 
-export default ScheduleTemp;
+export default ScheduleEvent;
 
+```
+
+### the data file
+
+```javascript
+  // DATA SECTION
+  //  enum for identifying the event_Type easily
+  enum EeventTypes {
+    food = "eventType_1",
+    concert = "eventType_2",
+    game_force = "eventType_3",
+    game_dark = "eventType_4",
+    lecture = "eventType_5",
+    closed = "eventType_6", // eventType_6 must be always the away, closed or no activity event
+    appointement = "eventType_7",
+  }
+  //   Mocked data for example - set the price of each event for example
+  const eventTypeData: TeventTypeData = {
+    eventPlace_id: "e2076d6a-9d6d-4b93-9ce0-a41f04c38c40", // If you have many places with different prices this id must be unique
+    [EeventTypes.food]: "12.5 Euros",
+    [EeventTypes.concert]: "20 Euros",
+    [EeventTypes.game_force]: "21 Euros",
+    [EeventTypes.game_dark]: "10 Euros",
+    [EeventTypes.lecture]: "6.5 Euros",
+    [EeventTypes.closed]: "",
+  };
+
+  //   Mocked data for example - schedules array with each calendar cells event
+  const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
+    schedules: [
+      {
+        id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7", // Unique schedule identifier
+        title: "Exemple de calendrier de type 'event'", // title of the event
+        type: "event", // type of the event (event - temperature - calendar)
+        day_slot_set: [
+          // each days & time slot instruction, start time only & the type of event (eventType_1 for example)
+          {
+            days: [0], // Monday
+            time_slot: [
+              {
+                start: 0, // start at midnight with closed type event
+                instruction: EeventTypes.closed,
+              },
+              {
+                start: 600, // start at 10:00AM (this is the end of the previous event too)
+                instruction: EeventTypes.lecture,
+              },
+              {
+                start: 720, // start at 12:00AM with food (eventType_1 in this example)
+                instruction: EeventTypes.food,
+              },
+              {
+                start: 900,
+                instruction: EeventTypes.game_dark,
+              },
+              {
+                start: 1230,
+                instruction: EeventTypes.concert,
+              },
+              {
+                start: 1380,
+                instruction: EeventTypes.closed,
+              },
+            ],
+          },
+          {
+            days: [1],
+            time_slot: [
+              {
+                start: 0,
+                instruction: EeventTypes.closed,
+              },
+              {
+                start: 600,
+                instruction: EeventTypes.lecture,
+              },
+              {
+                start: 720,
+                instruction: EeventTypes.food,
+              },
+              {
+                start: 900,
+                instruction: EeventTypes.game_force,
+              },
+              {
+                start: 1020,
+                instruction: EeventTypes.concert,
+              },
+
+              {
+                start: 1380,
+                instruction: EeventTypes.closed,
+              },
+            ],
+          },
+          {
+            days: [2],
+            time_slot: [
+              {
+                start: 0,
+                instruction: EeventTypes.closed,
+              },
+              {
+                start: 495,
+                instruction: EeventTypes.game_dark,
+              },
+              {
+                start: 720,
+                instruction: EeventTypes.food,
+              },
+              {
+                start: 900,
+                instruction: EeventTypes.game_dark,
+              },
+              {
+                start: 1215,
+                instruction: EeventTypes.closed,
+              },
+            ],
+          },
+          {
+            days: [3],
+            time_slot: [
+              {
+                start: 0,
+                instruction: EeventTypes.closed,
+              },
+              {
+                start: 450,
+                instruction: EeventTypes.concert,
+              },
+              {
+                start: 900,
+                instruction: EeventTypes.closed,
+              },
+            ],
+          },
+          {
+            days: [4],
+            time_slot: [
+              {
+                start: 0,
+                instruction: EeventTypes.closed,
+              },
+
+              {
+                start: 480,
+                instruction: EeventTypes.game_force,
+              },
+              {
+                start: 1380,
+                instruction: EeventTypes.closed,
+              },
+            ],
+          },
+          {
+            days: [5],
+            time_slot: [
+              {
+                start: 0,
+                instruction: EeventTypes.closed,
+              },
+              {
+                start: 450,
+                instruction: EeventTypes.game_dark,
+              },
+              {
+                start: 1020,
+                instruction: EeventTypes.closed,
+              },
+            ],
+          },
+          {
+            days: [6],
+            time_slot: [
+              {
+                start: 0,
+                instruction: EeventTypes.closed,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+
+```
+
+### The App file
+
+```javascript
+// App.tsx
+import ScheduleEvent from "./components/ScheduleEvent";
+import "./App.css";
+
+function App() {
+  return (
+    <div className="App">
+      <ScheduleEvent />
+    </div>
+  );
+}
+
+export default App;
 ```
 
 
