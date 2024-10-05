@@ -113,6 +113,8 @@ yarn add react-simple-schedule-viewer
 
 > This example is implemented with fake data for easily copy/paste in your project & adding more convenience for understanding the logic.
 
+> #### you can see the example code: [here](/examples/)
+
 ```javascript
 // App.tsx
 import { Suspense, useEffect, useState } from "react";
@@ -126,7 +128,7 @@ import {
   TeventsTextColor,
 } from "../dataTypes";
 // The content for each event modal
-import { contentForModal } from "../dataCards";
+import { contentForModal } from "./dataCards";
 // Home page example
 import HomePage from "../HomePage";
 // The enum for the event types & all data for the schedule cells
