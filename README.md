@@ -12,7 +12,7 @@
 - Dark & Light mode support
 - French & English languages support
 - Schedule view with three types : 'event', 'temperature' & 'calendar'
-- made with react-router-dom, tailwindcss & recoil
+- made with react, react-router-dom, tailwindcss & recoil
 - With only one peer dependency other than react & react-dom -> react-router-dom
 
 ---
