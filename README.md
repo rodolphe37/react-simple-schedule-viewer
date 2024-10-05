@@ -187,6 +187,17 @@ function App() {
                 locale={"fr"}
                 eventTypeData={eventTypeData}
                 modalContent={contentForModal}
+                  // If you want to display the number of the day on each day names
+                // withDays={false}
+                  // If you want to display a list with all schedules before the calendar view 
+                // withList={false}
+                  // If you want to display a return button to the list of schedules 
+                // withListReturnButton={true}
+                  // If you display a return button, the french button text 
+                // withListButtonName="Retourner à la page d'acceuil"
+                  // If you display a return button, the english button text 
+                // withListButtonNameUs="Go to HomePage"
+                
               />
             </Suspense>
           }
@@ -754,6 +765,30 @@ export const contentForModal = [
     ),
   },
 ];
+
+```
+
+## The HomePage (for demo)
+
+```javascript
+import { Link } from "react-router-dom";
+
+const HomePage = () => {
+  return (
+    <div>
+       <Link style={{fontSize:18}}
+        data-testid="demo-button"
+        to={`/schedule/`}
+      >
+        Go to demo...
+      </Link>
+      <h1>Go to Schedule view</h1>
+     
+    </div>
+  );
+};
+
+export default HomePage;
 
 ```
 
