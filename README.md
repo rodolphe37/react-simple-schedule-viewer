@@ -2,7 +2,7 @@
 
 # React simple schedule viewer
 
-## demo
+## Movie demo
 📅 An easy configurable weekly Calendar viewer component.
 
 <video width="500" height="300" controls>
@@ -12,9 +12,10 @@
 
 - Full Typescript support
 - Dark & Light mode support
-- Schedule with three types : 'event', 'temperature' & 'calendar'
+- French & English languages support
+- Schedule view with three types : 'event', 'temperature' & 'calendar'
 - made with react-router-dom, tailwindcss & recoil
-- With only one dependency other than react & react-dom -> react-router-dom
+- With only one peer dependency other than react & react-dom -> react-router-dom
 
 ### Live demo
 
@@ -32,14 +33,35 @@ or
 ```
 yarn add react-simple-schedule-viewer
 ```
+## pictures demo :
 
-### d.ts declaration
+> ### Event type:
+>
+> French - Light & Dark mode
+> ![French - Light](demo/pictures/event-fr-light.png)
+>
+> English - Light & Dark mode
+> ![French - Light](demo/pictures/event-en-light.png)
+>
+> > <video width="400" height="200" controls>
+> >  <source src="demo/movies/event-modal.mov" type="video/> mp4">
+> > </video>
 
-If you have a vite-env.d.ts or other d.ts file in your src folder you can put this
+> ### Temperature type:
+>
+> French - Light & Dark mode
+> ![French - Light](demo/pictures/temp-fr-light.png)
+>
+> English - Light & Dark mode
+> ![French - Light](demo/pictures/temp-en-light.png)
 
-> `declare module 'react-wheel-time-picker'`
-
-It's for finding corresponding type of 'react-wheel-time-picker'.
+> ### Calendar type:
+>
+> French - Light & Dark mode
+> ![French - Light](demo/pictures/calendar-fr-light.png)
+>
+> English - Light & Dark mode
+> ![French - Light](demo/pictures/calendar-en-light.png)
 
 ## Usage
 
