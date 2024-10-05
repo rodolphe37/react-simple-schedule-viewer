@@ -14,22 +14,7 @@
 
 ---
 
-### Live demo
 
-> To see the live demo:
-> [Click here](https://bright-jalebi-193c3a.netlify.app/)
-
-## install
-
-```
-npm install react-simple-schedule-viewer
-```
-
-or
-
-```
-yarn add react-simple-schedule-viewer
-```
 ## pictures demo :
 
 > ### Event type:
@@ -56,7 +41,48 @@ yarn add react-simple-schedule-viewer
 > English - Light & Dark mode
 > ![French - Light](demo/pictures/calendar-en-light.png)
 
+### Live demo
+
+> To see the live demo:
+> [Click here](https://bright-jalebi-193c3a.netlify.app/)
+
+
+### install dependency
+- as react-router-dom is a peer dependency, you need to install it first.
+```
+yarn add react-router-dom
+```
+> of course, like all react application wich use react router dom, you need to wrap your App element with a provider into the main.tsx page like that: 
+
+``` javascript
+// main.tsx
+  ...
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+  ...
+```
+
+## install library
+
+```
+npm install react-simple-schedule-viewer
+```
+
+or
+
+```
+yarn add react-simple-schedule-viewer
+```
+
 ## Usage
+
+> ### important
+> > the time value expected is only in minutes from 0 to 1440.
+>
+> > the expected range is by 15 min intervals only
+>
+> [Link to the complete 24h values by 15 mins range ](./HOURSRANGE.md 'full range of value from 0 to 1440')
 
 ### 24 hours format (light & dark)
 
