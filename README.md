@@ -116,16 +116,22 @@ yarn add react-simple-schedule-viewer
 ```javascript
 // App.tsx
 import { Suspense, useEffect, useState } from "react";
+import "../App.css";
 import { Route, Routes } from "react-router-dom";
-import { useTheme } from "../../useTheme";
+// If you don't have light & dark theme, you can skip this import & set false to isInDarkMode Schedule props 
+import { useTheme } from "../useTheme";
+// All types for the Schedule
 import {
   TcolorCellByEvents,
-  TeventsName,
   TeventsTextColor,
-} from "../../dataTypes";
-import { eventTypeData, scheduleByEventPlace } from "../../data";
-import { contentForModal } from "../../dataCards";
-
+} from "../dataTypes";
+// The content for each event modal
+import { contentForModal } from "../dataCards";
+// Home page example
+import HomePage from "../HomePage";
+// The enum for the event types & all data for the schedule cells
+import { EeventTypes, eventTypeData, scheduleByEventPlace } from "./eventData";
+//Import for the npm registry
 import Schedule from "react-simple-schedule-viewer";
 
 function App() {
@@ -136,45 +142,23 @@ function App() {
 
   // the default order of background colors in the array is
   const colorCellByEvents: TcolorCellByEvents = {
-    eventType_1: "#FFF2C4", // eventType_1 - required
-    eventType_2: "#FED7AD", // eventType_2 - optional
-    eventType_3: "#DBFFE2", // eventType_3 - optional
-    eventType_4: "#F6D1FF", // eventType_4 - optional
-    eventType_5: "#A0ABC0", // eventType_5 - optional
-    eventType_6: isDarkMode ? "#2D3648" : "#EDF0F7", // eventType_6 - required - is always the away, closed or absent event
-    eventType_7: "#B0DCFF", // eventType_7 - optional
+    [EeventTypes.food]: "#FFF2C4", // eventType_1 - required
+    [EeventTypes.concert]: "#FED7AD", // eventType_2 - optional
+    [EeventTypes.game_force]: "#DBFFE2", // eventType_3 - optional
+    [EeventTypes.game_dark]: "#F6D1FF", // eventType_4 - optional
+    [EeventTypes.lecture]: "#A0ABC0", // eventType_5 - optional
+    [EeventTypes.closed]: isDarkMode ? "#2D3648" : "#EDF0F7", // eventType_6 - required - is always the away, closed or absent event
+    // eventType_7: "#B0DCFF", // eventType_7 - optional - unused in this example
   };
   // the default order of text colors in the array is
   const eventsTextColor: TeventsTextColor = {
-    eventType_1: "#B99100", // eventType_1 - required
-    eventType_2: "#D46E00", // eventType_2 - optional
-    eventType_3: "#00B51E", // eventType_3 - optional
-    eventType_4: "#F134F7", // eventType_4 - optional
-    eventType_5: "#FFFFFF", // eventType_5 - optional
-    eventType_6: "#a0abc0", // eventType_6 - required - is always the away, closed or absent event
-    eventType_7: "#0196EC", // eventType_7 - optional
-  };
-
-  // This is for TEMP & CALENDAR type of schedule, the names of all eventTypes.
-  // (for the EVENT type, the name of the event is on the contentForModal - eventTitle)
-  const eventsName: TeventsName = {
-    eventType_1: "Présence 1",
-    eventType_2: "Présence 2",
-    eventType_3: "Présence 3",
-    eventType_4: "Présence 4",
-    eventType_5: "Éco",
-    eventType_6: "Absence",
-    eventType_7: "rendez-vous quotidien",
-  };
-  //  For french/English support both at the same time
-  const eventsNameUs: TeventsName = {
-    eventType_1: "Presence 1",
-    eventType_2: "Presence 2",
-    eventType_3: "Presence 3",
-    eventType_4: "Presence 4",
-    eventType_5: "Eco",
-    eventType_6: "Away",
-    eventType_7: "daily appointment",
+    [EeventTypes.food]: "#B99100", // eventType_1 - required
+    [EeventTypes.concert]: "#D46E00", // eventType_2 - optional
+    [EeventTypes.game_force]: "#00B51E", // eventType_3 - optional
+    [EeventTypes.game_dark]: "#F134F7", // eventType_4 - optional
+    [EeventTypes.lecture]: "#FFFFFF", // eventType_5 - optional
+    [EeventTypes.closed]: "#a0abc0", // eventType_6 - required - is always the away, closed or absent event
+    // eventType_7: "#0196EC", // eventType_7 - optional -- unused in this example
   };
 
 // Just for the demo
@@ -189,9 +173,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} /> 
         <Route
-          path="/schedule/*" // The path must be /schedule/*
+          path="/schedule/*" // The path imperatively must be '/schedule/*'
           element={
             <Suspense fallback={<div>Loading...</div>}>
               <Schedule
@@ -216,12 +200,64 @@ export default App;
 
 ```
 
+
+### The Typescript types file
+
+```javascript
+// dataTypes.ts
+export interface getSchedulesByEventPlaceIdResponse {
+  schedules: {
+    id: string;
+    title: string;
+    type: string;
+    day_slot_set: {
+      days: number[];
+      time_slot: {
+        start: number;
+        instruction: string;
+      }[];
+    }[];
+  }[];
+}
+export type TeventTypeData = {
+  eventPlace_id?: string;
+  eventType_1: string;
+  eventType_2?: string;
+  eventType_3?: string;
+  eventType_4?: string;
+  eventType_5?: string;
+  eventType_6: string;
+  eventType_7?: string;
+};
+export type TcolorCellByEvents = Omit<TeventTypeData, "eventPlace_id">;
+
+export type TeventsTextColor = Omit<TeventTypeData, "eventPlace_id">;
+
+export enum LanguageKeys {
+  en = "en",
+  fr = "fr",
+}
+
+
+export type TeventsName = {
+  eventType_1: string;
+  eventType_2?: string;
+  eventType_3?: string;
+  eventType_4?: string;
+  eventType_5?: string;
+  eventType_6: string;
+  eventType_7?: string;
+}
+```
+
 ### the data file
 
 ```javascript
-  // DATA SECTION
-  //  enum for identifying the event_Type easily
-  enum EeventTypes {
+// eventData.ts
+  import { getSchedulesByEventPlaceIdResponse, TeventTypeData } from "../../dataTypes";
+
+  //  enum for identidying the event_Type easily
+  export enum EeventTypes {
     food = "eventType_1",
     concert = "eventType_2",
     game_force = "eventType_3",
@@ -231,7 +267,7 @@ export default App;
     appointement = "eventType_7",
   }
   //   Mocked data for example - set the price of each event for example
-  const eventTypeData: TeventTypeData = {
+  export const eventTypeData: TeventTypeData = {
     eventPlace_id: "e2076d6a-9d6d-4b93-9ce0-a41f04c38c40", // If you have many places with different prices this id must be unique
     [EeventTypes.food]: "12.5 Euros",
     [EeventTypes.concert]: "20 Euros",
@@ -242,10 +278,10 @@ export default App;
   };
 
   //   Mocked data for example - schedules array with each calendar cells event
-  const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
+  export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
     schedules: [
       {
-        id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7", // Unique schedule identifier
+        id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7", // Unique schedule id identifier
         title: "Exemple de calendrier de type 'event'", // title of the event
         type: "event", // type of the event (event - temperature - calendar)
         day_slot_set: [
@@ -405,6 +441,7 @@ export default App;
 ### The contentForModal data
 
 ```javascript
+// dataCards.tsx
 import { Fragment } from "react/jsx-runtime";
 import { EeventTypes } from "./enum";
 
@@ -415,7 +452,7 @@ export const contentForModal = [
     eventType: EeventTypes.concert, // The event type - for this example it's the eventType_2 based with the enum name
     startTime: 1230, // The start time of the event - the end of this event is defined by the next start time event
     eventTitle: "Englewood Concert", // The title
-    contentModal: ( // This variable get a JSX Element you want
+    contentModal: ( // This variable get the JSX Element you want, can be card, external component...
       <Fragment>
         <h1 style={{ fontWeight: "bold", padding: 10 }}>
           Event de lundi à 20:30 et réservation
