@@ -4,7 +4,7 @@
 
 # React simple schedule viewer
 
-📅 An easy configurable weekly Calendar viewer component.
+## 📅 An easy configurable react weekly Calendar viewer component.
 
 ---
 
