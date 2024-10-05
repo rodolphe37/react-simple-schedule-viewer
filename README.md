@@ -80,7 +80,7 @@ yarn add react-simple-schedule-viewer
 ## API
 
 | Name                 | Type               | Default                                | Description                                                                    |
-| -------------------- | ------------------ | -------------------------------------- | ------------------------------------------------------------------------------ | --- |
+| -------------------- | ------------------ | -------------------------------------- | ------------------------------------------------------------------------------ |
 | scheduleByEventPlace | Object (required)  | `{ schedules: [] }`                    | The data object for the schedule.                                              |
 | weekStartsOn         | Number (required)  | `0`                                    | The day of the week start                                                      |
 | isInDarkMode         | Boolean (required) | `false`                                | For dark mode support.                                                         |
@@ -93,9 +93,9 @@ yarn add react-simple-schedule-viewer
 | modalContent         | Array (optional)   | `[]`                                   | Custom modal content (event type only)                                         |
 | withDays             | boolean (optional) | `false`                                | display the day of each week days.                                             |
 | withList             | Boolean (optional) | `false`                                | display a list of the schedules before the calendar view.                      |
-| withListButtonName   | String (optional)  | `""`                                   | when the list is true you can add a french text for the return button          |
-| withListButtonNameUs | String (optional)  | `""`                                   | when the list is true you can add an English text for the return button        |
-| withListReturnButton | Boolean (optional) | `false`                                | when the list is true you can add a return button by setting the value to true |
+| withListButtonName   | String (optional)  | `""`                                   | when the list is true you can add a french text for the return button |
+| withListButtonNameUs | String (optional)  | `""`                                   |  you can add an English text for the button                                                         |
+| withListReturnButton | Boolean (optional) | `false`                                | when the list is true you can add a return button by setting the value to true |                                                         |
 
 ## Usage
 
