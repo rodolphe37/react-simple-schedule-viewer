@@ -88,10 +88,10 @@ yarn add react-simple-schedule-viewer
 | isInDarkMode         | Boolean (required) | `false`                                | For dark mode support.                                                         |
 | colorCellByEvents    | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | The colors of the cells.                                                       |
 | eventsTextColor      | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | the color for the text cells calendar.                                         |
-| locale               | String (required)  | `"fr" `                                | The initial value that the picker begin with in the first time.                |
+| locale               | String (required)  | `"fr" `                                | for fr/en support.                |
 | eventsNameUs         | Object (optional)  | `{ eventType_1: "", eventType_6: "" }` | the events name in us version.                                                 |
 | eventsName           | Object (optional)  | `{ eventType_1: "", eventType_6: "" }` | the events name in fr version.                                                 |
-| eventTypeData        | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | The value of each event.                                                       |
+| eventTypeData        | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | The value of each event (prices, degrees, or other infos).                                                       |
 | modalContent         | Array (optional)   | `[]`                                   | Custom modal content (event type only)                                         |
 | withDays             | boolean (optional) | `false`                                | display the day of each week days.                                             |
 | withList             | Boolean (optional) | `false`                                | display a list of the schedules before the calendar view.                      |
