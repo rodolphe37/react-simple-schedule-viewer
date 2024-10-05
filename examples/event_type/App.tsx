@@ -65,7 +65,7 @@ function App() {
                 isInDarkMode={isDarkMode}
                 colorCellByEvents={colorCellByEvents}
                 eventsTextColor={eventsTextColor}
-                locale={"en"}
+                locale={"fr"}
                 eventTypeData={eventTypeData}
                 modalContent={contentForModal}
               />
