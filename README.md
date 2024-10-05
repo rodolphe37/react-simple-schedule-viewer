@@ -4,7 +4,8 @@
 
 📅 An easy configurable weekly Calendar viewer component.
 
---- 
+---
+
 - Full Typescript support
 - Dark & Light mode support
 - French & English languages support
@@ -13,7 +14,6 @@
 - With only one peer dependency other than react & react-dom -> react-router-dom
 
 ---
-
 
 ## pictures demo :
 
@@ -46,15 +46,17 @@
 > To see the live demo:
 > [Click here](https://bright-jalebi-193c3a.netlify.app/)
 
-
 ### install dependency
+
 - as react-router-dom is a peer dependency, you need to install it first.
+
 ```
 yarn add react-router-dom
 ```
-> of course, like all react application wich use react router dom, you need to wrap your App element with a provider into the main.tsx page like that: 
 
-``` javascript
+> of course, like all react application wich use react router dom, you need to wrap your App element with a provider into the main.tsx page like that:
+
+```javascript
 // main.tsx
   ...
   <BrowserRouter>
@@ -75,14 +77,35 @@ or
 yarn add react-simple-schedule-viewer
 ```
 
+## API
+
+| Name                 | Type               | Default                                | Description                                                                    |
+| -------------------- | ------------------ | -------------------------------------- | ------------------------------------------------------------------------------ | --- |
+| scheduleByEventPlace | Object (required)  | `{ schedules: [] }`                    | The data object for the schedule.                                              |
+| weekStartsOn         | Number (required)  | `0`                                    | The day of the week start                                                      |
+| isInDarkMode         | Boolean (required) | `false`                                | For dark mode support.                                                         |
+| colorCellByEvents    | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | The colors of the cells.                                                       |
+| eventsTextColor      | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | the color for the text cells calendar.                                         |
+| locale               | String (required)  | `"fr" `                                | The initial value that the picker begin with in the first time.                |
+| eventsNameUs         | Object (optional)  | `{ eventType_1: "", eventType_6: "" }` | the events name in us version.                                                 |
+| eventsName           | Object (optional)  | `{ eventType_1: "", eventType_6: "" }` | the events name in fr version.                                                 |
+| eventTypeData        | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | The value of each event.                                                       |
+| modalContent         | Array (optional)   | `[]`                                   | Custom modal content (event type only)                                         |
+| withDays             | boolean (optional) | `false`                                | display the day of each week days.                                             |
+| withList             | Boolean (optional) | `false`                                | display a list of the schedules before the calendar view.                      |
+| withListButtonName   | String (optional)  | `""`                                   | when the list is true you can add a french text for the return button          |
+| withListButtonNameUs | String (optional)  | `""`                                   | when the list is true you can add an English text for the return button        |
+| withListReturnButton | Boolean (optional) | `false`                                | when the list is true you can add a return button by setting the value to true |
+
 ## Usage
 
 > ### important
+>
 > > the time value expected is only in minutes from 0 to 1440.
 >
 > > the expected range is by 15 min intervals only
 >
-> [Link to the complete 24h values by 15 mins range ](./HOURSRANGE.md 'full range of value from 0 to 1440')
+> [Link to the complete 24h values by 15 mins range ](./HOURSRANGE.md "full range of value from 0 to 1440")
 
 ### 24 hours format (light & dark)
 
@@ -142,34 +165,6 @@ export default const  MyApp = () => {
    );
 }
 ```
-
-## API
-
-| Name               | Type                                                     | Default        | Description                                                     |
-| ------------------ | -------------------------------------------------------- | -------------- | --------------------------------------------------------------- |
-| label              | String (optional)                                        | n/a            | Name of the input.                                              |
-| isDarkMode         | Boolean (optional)                                       | n/a            | for dark mode support.                                          |
-| value              | String                                                   | n/a            | Current value.                                                  |
-| cellHeight         | Number (optional)                                        | 28             | The height of the cell number.                                  |
-| placeHolder        | String (optional)                                        | `"Selet_time"` | Time input's placeholder.                                       |
-| pickerDefaultValue | String (optional)                                        | `"00:00"`      | The initial value that the picker begin with in the first time. |
-| disabled           | Boolean (optional)                                       | `false`        | Whether picker is disabled.                                     |
-| isOpen             | Boolean (optional)                                       | `false`        | Whether the time picker should be opened.                       |
-| required           | Boolean (optional)                                       | `false`        | Whether time input should be required.                          |
-| cancelButtonText   | String (optional)                                        | `"Cancel"`     | Cancel button text content                                      |
-| saveButtonText     | String (optional)                                        | `"Save"`       | Save button text content                                        |
-| controllers        | Boolean (optional)                                       | `true`         | Whether the buttons should be displayed                         |
-| seperator          | Boolean (optional)                                       | `true`         | whether show the colon seperator                                |
-| id                 | String (optional)                                        | n/a            | Input time picker id                                            |
-| name               | String (optional)                                        | n/a            | Input time picker name                                          |
-| use12Hours         | Boolean (optional)                                       | false          | 12 hours display mode                                           |
-| inputClassName     | String (optional)                                        | n/a            | Input time picker className                                     |
-| popupClassName     | String (optional)                                        | n/a            | time picker popup className                                     |
-| onChange           | `(value) => alert ('New time is: ', value)`              | n/a            | Called when select a different value                            |
-| onSave             | `(value) => alert ('Time saved is: ', value)` (optional) | n/a            | When the user clicks on save button                             |
-| onClose            | `() => alert('Clock closed')` (optional)                 | n/a            | When the user clicks on cancel button                           |
-| onAmPmChange       | `(value) => alert('Am/Pm changed : value')` (optional)   | n/a            | called when select an am/pm value                               |
-| onOpen             | `() => alert('time picker opened')` (optional)           | n/a            | called when time picker is opened                               |
 
 ## Contributions Welcome!
 
