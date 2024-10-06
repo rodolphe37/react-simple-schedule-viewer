@@ -325,7 +325,7 @@ import { getSchedulesByEventPlaceIdResponse, TeventTypeData } from "../../dataTy
     [EeventTypes.game_force]: "21 Euros",
     [EeventTypes.game_dark]: "10 Euros",
     [EeventTypes.lecture]: "6.5 Euros",
-    [EeventTypes.closed]: "",
+    [EeventTypes.closed]: "pas d'événement",
   };
 
   //   Mocked data for example - schedules array with each calendar cells event
