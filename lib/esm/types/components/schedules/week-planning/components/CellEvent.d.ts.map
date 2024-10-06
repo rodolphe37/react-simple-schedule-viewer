@@ -1,1 +1,1 @@
-{"version":3,"file":"CellEvent.d.ts","sourceRoot":"","sources":["../../../../../../../src/components/schedules/week-planning/components/CellEvent.tsx"],"names":[],"mappings":"AAEA,OAAO,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AASlD,QAAA,MAAM,SAAS,uPAkBZ,cAAc,4CAyKhB,CAAC;AAEF,eAAe,SAAS,CAAC"}
+{"version":3,"file":"CellEvent.d.ts","sourceRoot":"","sources":["../../../../../../../src/components/schedules/week-planning/components/CellEvent.tsx"],"names":[],"mappings":"AAEA,OAAO,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AASlD,QAAA,MAAM,SAAS,uPAkBZ,cAAc,4CAwKhB,CAAC;AAEF,eAAe,SAAS,CAAC"}
