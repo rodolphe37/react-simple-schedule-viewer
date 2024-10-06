@@ -105,7 +105,7 @@
 ## Live demo
 
 > To see the live demo:
-> [Click here](https://starlit-figolla-146412.netlify.app/)
+> [Click here](https://steady-hamster-02673e.netlify.app/)
 
 ## install dependency
 
@@ -1449,6 +1449,7 @@ export default HomePage;
 > - You can combine all schedule types at the same time,
 > - if you want to see how, there is a link to the complex demo repository wich combine all schedules type together.
 ![Full type image](demo/pictures/multi-schedule-types.png)
+> 
 >
 > > [Link to the repository here](https://github.com/rodolphe37/simple-schedule-library-example)
 ---
