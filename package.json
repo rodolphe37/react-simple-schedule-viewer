@@ -1,6 +1,6 @@
 {
   "name": "react-simple-schedule-viewer",
-  "version": "0.10.0",
+  "version": "1.0.0",
   "description": "📅 An easy configurable weekly Calendar viewer component with three types: events, temperature, and calendar. 📅",
   "exports": {
     ".": {
