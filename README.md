@@ -12,7 +12,7 @@
 - Schedule view with three types : **'event'**, **'temperature'** & **'calendar'**
 - made with react, react-router-dom, tailwindcss
 - The global state of the app is managed by recoil
-- All error ar catched and rendered a fallback UI with react-error-boundary
+- All errors are catched and rendered a fallback UI with react-error-boundary
 
 ---
 
