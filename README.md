@@ -12,8 +12,9 @@
 - **Dark & Light** mode support
 - **French & English** languages support
 - Schedule view with three types : **'event'**, **'temperature'** & **'calendar'**
-- made with react, react-router-dom, tailwindcss & recoil
-- With only one peer dependency other than react & react-dom -> **react-router-dom**
+- made with react, react-router-dom, tailwindcss
+- The global state of the app is managed by recoil
+- All error ar catched and rendered a fallback UI with react-error-boundary
 
 ---
 
@@ -109,10 +110,10 @@
 
 ## install dependency
 
-- as react-router-dom is a peer dependency, you need to install it first.
+- as react-router-dom, recoil & react error-boundary are peer dependencies, you need to install it first.
 
 ```
-yarn add react-router-dom
+yarn add react-router-dom recoil react-error-boundary
 ```
 
 > of course, like all react application wich use react router dom, you need to wrap your App element with a provider into the main.tsx page like that:
