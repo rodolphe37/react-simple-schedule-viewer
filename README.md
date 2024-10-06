@@ -82,12 +82,12 @@
 > English - Light & Dark mode
 > ![French - Light](demo/pictures/calendar-en-light.png)
 
-### Live demo
+## Live demo
 
 > To see the live demo:
 > [Click here](https://starlit-figolla-146412.netlify.app/)
 
-### install dependency
+## install dependency
 
 - as react-router-dom is a peer dependency, you need to install it first.
 
@@ -137,6 +137,61 @@ yarn add react-simple-schedule-viewer
 | withListButtonName   | String (optional)  | `""`                                   | when the list is true you can add a french text for the return button |
 | withListButtonNameUs | String (optional)  | `""`                                   |  you can add an English text for the button                                                         |
 | withListReturnButton | Boolean (optional) | `false`                                | when the list is true you can add a return button by setting the value to true |                                                         |
+
+
+
+## Some precision about options
+
+#### All options are available in english language too, without intl or i18n...
+---
+> - weekStartsOn : 
+>
+> you can choice the default day of the beginning of the schedule.
+>
+---
+---
+> - eventsNameUs & eventsName & modalContent : 
+>
+> These three variables are used only for the 'event' type schedule. for the other types you don't need to implement it.
+>
+---
+---
+> - withDays : 
+>
+> That variable display the current month on top & indicate the current day with a red point & a more stronger font size. This option is by default for the calendar type (in this case, it's no need to put this variable to the Schedule props).
+>
+> ![withDay light option](demo/pictures/options/withDay.png)
+> ![withDay dark option](demo/pictures/options/withDay-dark.png)
+
+---
+---
+
+> - withList :
+>
+> This option display a list of your schedules before the calendar view, with a return button logic.
+>
+> ![withDay light option](demo/pictures/options/withList.png)
+> ![withDay dark option](demo/pictures/options/withListDark.png)
+
+---
+---
+
+> - withListReturnButton :
+>
+> This option display a button to return to your home page for example. This option is used when the withList boolean is true.
+>
+> Example : 
+> ```javascript
+> withListReturnButton={true}
+> withListButtonName="Retourner à la page d'acceuil"
+> withListButtonNameUs="Go to HomePage"
+
+> ```
+
+> ![withDay light option](demo/pictures/options/withReturnButton.png)
+> ![withDay dark option](demo/pictures/options/withReturnButtonDark.png)
+
+---
 
 ## :dart: Usage
 
