@@ -6,18 +6,20 @@ type TdaysOfWeek = {
   weekDayNames: string[];
 };
 
-const useGetDaysController = (
-  calendarData: TdaysOfWeek,
-) => {
+const useGetDaysController = (calendarData: TdaysOfWeek) => {
   const [daysOfWeek, setDaysOfWeek] = useState<string[]>();
 
   const getWeekDays = useCallback(() => {
     const curr = new Date();
     const week: string[] = [];
-    for (let i = 1; i <= 7; i++) {
-      const first = curr.getDate() - curr.getDay() + i;
-      const day = new Date(curr.setDate(first)).toISOString().slice(8, 10);
+    for (let i = 0; i <= 7; i++) {
+      const first =
+        curr.getDate() - curr.getDay() + i + (curr.getDay() === 0 ? -6 : 1);
+      const day = new Date(curr.setDate(Number(first)))
+        .toISOString()
+        .slice(8, 10);
       week.push(day);
+
       setDaysOfWeek(week);
     }
   }, []);
@@ -47,7 +49,7 @@ const useGetDaysController = (
     `${daysOfWeekNameFr(calendarData.weekDayNames[6])} ${daysOfCurrentWeek[6]}`,
   ];
 
-  return { calendarWithDaysUS, calendarWithDaysFrench};
+  return { calendarWithDaysUS, calendarWithDaysFrench };
 };
 
 export default useGetDaysController;

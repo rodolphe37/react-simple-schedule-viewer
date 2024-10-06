@@ -11,12 +11,11 @@ import useCalendarController from "../hooks/useCalendarController";
 import CalendarScrollToTopButton from "./CalendarScrollToTopButton";
 import CalendarScrollToBottomButton from "./CalendarScrollToBottomButton";
 import useWindowDimensions from "../../../../hooks/useGetWindowDimensions";
-
+import HoursRangeIndicator from "./HoursRangeIndicator";
 import { TContentForModal, TeventsName, TeventTypeData } from "../../types";
 import useGetDaysController from "../../hooks/useGetDaysController";
 import { today } from "../utils/dateUtils";
 import React from "react";
-import HoursRangeIndicator from "./HoursRangeIndicator";
 
 interface ICalendarProps {
   weekStartsOn?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | undefined;
@@ -61,7 +60,7 @@ const Calendar = ({
   const { calendarWithDaysUS, calendarWithDaysFrench } =
     useGetDaysController(calendarData);
 
-  const currentDay = today.getDay() - 1;
+  const currentDay = today.getDate();
   const currentDayOfWeek =
     locale === "fr"
       ? calendarWithDaysFrench[currentDay]
@@ -91,7 +90,7 @@ const Calendar = ({
                           currentDayOfWeek === day
                             ? {
                                 color: isInDarkMode ? "#fff" : "#4d57ff",
-                                fontSize: ".8rem",
+                                fontSize: "1.12rem",
                                 position: "relative",
                               }
                             : {}
@@ -123,7 +122,7 @@ const Calendar = ({
                           currentDayOfWeek === day
                             ? {
                                 color: isInDarkMode ? "#fff" : "#4d57ff",
-                                fontSize: ".8rem",
+                                fontSize: "1.12rem",
                                 position: "relative",
                               }
                             : {}
