@@ -82,6 +82,15 @@
 > English - Light & Dark mode
 > ![French - Light](demo/pictures/calendar-en-light.png)
 
+> ### Some cool features:
+>
+> start & end time indication (only in french for the moment, sorry!)
+> ![Hours indicator](demo/pictures/hours-indicator.png)
+>
+> English - Light & Dark mode
+> <video src="/demo/pictures/auto-scroll.mp4" controls="controls" style="max-width: 730px;">
+</video>
+
 ## Live demo
 
 > To see the live demo:
