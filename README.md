@@ -140,7 +140,7 @@ yarn add react-simple-schedule-viewer
 
 ## Usage
 
-> ### important
+> ### heavy_exclamation_mark: important
 >
 > > ### the time value expected is only in minutes from 0 to 1440.
 > >
