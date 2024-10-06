@@ -153,7 +153,7 @@ const ScheduleViewWrapper = ({
   return (
     <div className="pr-0 pl-2 w-full" style={{ padding: "1em 4em 4em 4em" }}>
       <div>
-        {isInCalendarType === "calendar" ? (
+        {isInCalendarType === "calendar" || withDays ? (
           <h1
             style={{
               fontSize: 18,

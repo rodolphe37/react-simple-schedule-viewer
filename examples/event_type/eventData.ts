@@ -11,7 +11,6 @@ export enum EeventTypes {
   game_dark = "eventType_4",
   lecture = "eventType_5",
   closed = "eventType_6", // eventType_6 must be always the away, closed or no activity event
-  appointement = "eventType_7",
 }
 //   Mocked data for example - set the price of each event for example
 export const eventTypeData: TeventTypeData = {
