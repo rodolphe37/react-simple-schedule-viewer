@@ -1,7 +1,5 @@
 [![npm](https://img.shields.io/npm/v/react-simple-schedule-viewer)](https://www.npmjs.com/package/react-simple-schedule-viewer) ![downloads](https://img.shields.io/npm/dt/react-simple-schedule-viewer?color=blue&logo=npm&logoColor=blue)
 
-# WORK IN PROGRESS...
-
 # React simple schedule viewer
 
 ## 📅 An easy configurable react weekly Calendar viewer component.
