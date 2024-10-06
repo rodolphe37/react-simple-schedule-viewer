@@ -114,6 +114,11 @@
 
 - as react-router-dom is a dependency of the package, you need to install it first as dependencies in your app.
 
+>
+> for info:
+>- [react-router-dom npm registry](https://www.npmjs.com/package/react-router-dom)
+>
+
 ```bash
 yarn add react-router-dom
 ```
@@ -129,6 +134,14 @@ yarn add react-router-dom
   ...
 ```
 - recoil & react-error-boundary are dev dependencies of the package, you need to install it first as dev dependencies in your app.
+
+>
+> for info:
+> - [recoil npm registry](https://www.npmjs.com/package/recoil)
+> - [react-error-boundary npm registry](https://www.npmjs.com/package/react-error-boundary)
+>
+
+
 ```bash
 yarn add -D recoil react-error-boundary
 ```
