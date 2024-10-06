@@ -138,7 +138,7 @@ yarn add react-simple-schedule-viewer
 
 ## :dart: Usage
 
-> ### heavy_exclamation_mark: important
+> ### :heavy_exclamation_mark: important
 >
 > > ### the time value expected is only in minutes from 0 to 1440.
 > >
