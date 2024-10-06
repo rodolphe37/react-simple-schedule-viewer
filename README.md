@@ -1166,7 +1166,7 @@ Thank you! :heart:
 
 ---
 
-## License
+# :scroll: License
 
 The MIT License.
 
