@@ -2,7 +2,7 @@ import { Suspense, useEffect, useState } from "react";
 import "../App.css";
 import { Route, Routes } from "react-router-dom";
 import { TcolorCellByEvents, TeventsName, TeventsTextColor } from "./dataTypes";
-import { eventTypeData, scheduleByEventPlace } from "./eventData";
+import { EeventTypes, eventTypeData, scheduleByEventPlace } from "./eventData";
 import React from "react";
 import { useTheme } from "../theme/useTheme";
 import HomePage from "../HomePage";
@@ -20,25 +20,25 @@ function App() {
 
   // the default order of background colors in the array is
   const colorCellByEvents: TcolorCellByEvents = {
-    eventType_1: "#B0DCFF", // eventType_1 - required
-    eventType_6: isDarkMode ? "#2D3648" : "#EDF0F7", // eventType_6 - required - is always the away, closed or absent event
+    [EeventTypes.appointement]: "#B0DCFF", // eventType_1 - required
+    [EeventTypes.away]: isDarkMode ? "#2D3648" : "#EDF0F7", // eventType_6 - required - is always the away, closed or absent event
   };
   // the default order of text colors in the array is
   const eventsTextColor: TeventsTextColor = {
-    eventType_1: "#0196EC", // eventType_1 - required
-    eventType_6: "#a0abc0", // eventType_6 - required - is always the away, closed or absent event
+    [EeventTypes.appointement]: "#0196EC", // eventType_1 - required
+    [EeventTypes.away]: "#a0abc0", // eventType_6 - required - is always the away, closed or absent event
   };
 
   // This is for TEMP & CALENDAR type of schedule, the names of all eventTypes.
   // (for the EVENT type, the name of the event is on the contentForModal - eventTitle)
   const eventsName: TeventsName = {
-    eventType_1: "rendez-vous quotidien",
-    eventType_6: "Pas de rendez-vous",
+    [EeventTypes.appointement]: "rendez-vous quotidien",
+    [EeventTypes.away]: "Pas de rendez-vous",
   };
   //  For french/English support both at the same time
   const eventsNameUs: TeventsName = {
-    eventType_1: "daily appointment",
-    eventType_6: "No appointment",
+    [EeventTypes.appointement]: "daily appointment",
+    [EeventTypes.away]: "No appointment",
   };
 
   useEffect(() => {

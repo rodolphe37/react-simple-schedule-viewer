@@ -3,12 +3,12 @@ import {
   TeventTypeData,
 } from "./dataTypes";
 
-    //  enum for identidying the event_Type easily
-    export enum EeventTypes {
-      appointement = "eventType_1",
-      away = "eventType_6", // eventType_6 must be always the away, away or no activity event
-      // appointement = "eventType_7", no used in this example
-    }
+//  enum for identidying the event_Type easily
+export enum EeventTypes {
+  appointement = "eventType_1",
+  away = "eventType_6", // eventType_6 must be always the away, away or no activity event
+  // appointement = "eventType_7", no used in this example
+}
 
 export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
   schedules: [

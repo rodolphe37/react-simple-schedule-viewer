@@ -31,9 +31,11 @@
 
 [Usage](#dart-Usage)
 
-  - [Event type view](#Event-type-view)
+  - [Event type view](#circus_tent-Event-type-view)
 
-  - [Temp type view](#Temperature-type-view)
+  - [Temp type view](#hotsprings-temperature-type-view)
+
+  - [Calendar type](#calendar-calendar-type-view)
 
 
 [Contributing](#pencil2-Contributing)
@@ -146,7 +148,7 @@ yarn add react-simple-schedule-viewer
 >
 > > > #### [Link to the complete 24h values by 15 mins range ](./HOURSRANGE.md "full range of value from 0 to 1440")
 
-### Event type view
+## :circus_tent: Event type view
 
 > This example is implemented with fake data for easily copy/paste in your project & adding more convenience for understanding the logic.
 
@@ -252,6 +254,7 @@ export default App;
 
 
 ### The Typescript types file
+> - (the same for each type of schedule)
 
 ```javascript
 // dataTypes.ts
@@ -304,7 +307,6 @@ export type TeventsName = {
 
 ```javascript
 // eventData.ts
-
 import { getSchedulesByEventPlaceIdResponse, TeventTypeData } from "../../dataTypes";
 
   //  enum for identidying the event_Type easily
@@ -505,6 +507,7 @@ import { getSchedulesByEventPlaceIdResponse, TeventTypeData } from "../../dataTy
 ```
 
 ### The contentForModal data
+> - only for event type
 
 ```javascript
 // dataCards.tsx
@@ -823,7 +826,7 @@ export const contentForModal = [
 
 ```
 
-## The HomePage (for demo)
+### The HomePage (for demo)
 
 ```javascript
 import { Link } from "react-router-dom";
@@ -847,7 +850,7 @@ export default HomePage;
 
 ```
 
-### Temperature type view
+## :hotsprings: Temperature type view
 
 > This example is implemented with fake data for easily copy/paste in your project & adding more convenience for understanding the logic.
 
@@ -855,7 +858,7 @@ export default HomePage;
 ```javascript
 // App.tsx
 import { Suspense, useEffect, useState } from "react";
-import "../../App.css";
+import "../App.css";
 import { Route, Routes } from "react-router-dom";
 import Schedule from "react-simple-schedule-viewer";
 import { useTheme } from "../theme/useTheme";
@@ -963,6 +966,7 @@ export default App;
 
 
 ### The Typescript types file
+> - (the same for each type of schedule)
 
 ```javascript
 // dataTypes.ts
@@ -1109,7 +1113,7 @@ export const eventTypeData: TeventTypeData = {
 
 ```
 
-## The HomePage (for demo)
+### The HomePage (for demo)
 
 ```javascript
 import { Link } from "react-router-dom";
@@ -1133,6 +1137,239 @@ export default HomePage;
 
 ```
 
+## :calendar: Calendar type view
+
+> This example is implemented with fake data for easily copy/paste in your project & adding more convenience for understanding the logic.
+
+> #### you can see the example code: [here](/examples/calendar_type/)
+```javascript
+// App.tsx
+import { Suspense, useEffect, useState } from "react";
+import "../App.css";
+import { Route, Routes } from "react-router-dom";
+import { TcolorCellByEvents, TeventsName, TeventsTextColor } from "./dataTypes";
+import {EeventTypes, eventTypeData, scheduleByEventPlace } from "./eventData";
+import React from "react";
+import { useTheme } from "../theme/useTheme";
+import HomePage from "../HomePage";
+
+import Schedule from "react-simple-schedule-viewer";
+
+
+function App() {
+  //  Variables for the Schedule component
+  const weekStartsOn = 0;
+  const { theme, setTheme } = useTheme();
+  const [isDarkMode] = useState(theme === "dark" ? true : false);
+
+  // the default order of background colors in the array is
+  const colorCellByEvents: TcolorCellByEvents = {
+    [EeventTypes.appointement]: "#B0DCFF", // eventType_1 - required
+    [EeventTypes.away]: isDarkMode ? "#2D3648" : "#EDF0F7", // eventType_6 - required - is always the away, closed or absent event
+  };
+  // the default order of text colors in the array is
+  const eventsTextColor: TeventsTextColor = {
+    [EeventTypes.appointement]: "#0196EC", // eventType_1 - required
+    [EeventTypes.away]: "#a0abc0", // eventType_6 - required - is always the away, closed or absent event
+  };
+
+  // This is for TEMP & CALENDAR type of schedule, the names of all eventTypes.
+  // (for the EVENT type, the name of the event is on the contentForModal - eventTitle)
+  const eventsName: TeventsName = {
+    [EeventTypes.appointement]: "rendez-vous quotidien",
+    [EeventTypes.away]: "Pas de rendez-vous",
+  };
+  //  For french/English support both at the same time
+  const eventsNameUs: TeventsName = {
+    [EeventTypes.appointement]: "daily appointment",
+    [EeventTypes.away]: "No appointment",
+  };
+
+  useEffect(() => {
+    if (isDarkMode) {
+      setTheme("dark");
+    } else if (!isDarkMode) {
+      setTheme("light");
+    }
+  });
+
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/schedule/*"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Schedule
+                scheduleByEventPlace={scheduleByEventPlace}
+                weekStartsOn={weekStartsOn}
+                isInDarkMode={isDarkMode}
+                colorCellByEvents={colorCellByEvents}
+                eventsTextColor={eventsTextColor}
+                locale={"fr"}
+                eventsNameUs={eventsNameUs}
+                eventsName={eventsName}
+                eventTypeData={eventTypeData}
+              />
+            </Suspense>
+          }
+        />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+```
+
+
+### The Typescript types file 
+> - (the same for each type of schedule)
+
+```javascript
+// dataTypes.ts
+export interface getSchedulesByEventPlaceIdResponse {
+  schedules: {
+    id: string;
+    title: string;
+    type: string;
+    day_slot_set: {
+      days: number[];
+      time_slot: {
+        start: number;
+        instruction: string;
+      }[];
+    }[];
+  }[];
+}
+export type TeventTypeData = {
+  eventPlace_id?: string;
+  eventType_1: string;
+  eventType_2?: string;
+  eventType_3?: string;
+  eventType_4?: string;
+  eventType_5?: string;
+  eventType_6: string;
+  eventType_7?: string;
+};
+export type TcolorCellByEvents = Omit<TeventTypeData, "eventPlace_id">;
+
+export type TeventsTextColor = Omit<TeventTypeData, "eventPlace_id">;
+
+export enum LanguageKeys {
+  en = "en",
+  fr = "fr",
+}
+
+
+export type TeventsName = {
+  eventType_1: string;
+  eventType_2?: string;
+  eventType_3?: string;
+  eventType_4?: string;
+  eventType_5?: string;
+  eventType_6: string;
+  eventType_7?: string;
+}
+```
+
+### the data file
+
+```javascript
+// eventData.ts
+import {
+  getSchedulesByEventPlaceIdResponse,
+  TeventTypeData,
+} from "./dataTypes";
+
+    //  enum for identidying the event_Type easily
+    export enum EeventTypes {
+      appointement = "eventType_1",
+      away = "eventType_6", // eventType_6 must be always the away, away or no activity event
+      // appointement = "eventType_7", no used in this example
+    }
+
+export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
+  schedules: [
+    {
+      id: "5bfaefe7-a189-40de-bd8c-468bd4ff0e77",
+      title: "Exemple de calendrier de type 'calendar'",
+      type: "calendar",
+      day_slot_set: [
+        {
+          days: [0, 1, 2, 3, 4, 5, 6],
+          time_slot: [
+            {
+              start: 0,
+              instruction: EeventTypes.away,
+            },
+            {
+              start: 600,
+              instruction: EeventTypes.appointement,
+            },
+            {
+              start: 960,
+              instruction: EeventTypes.away,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "47cdbc5a-74a9-47c6-a5ca-4c285748889b",
+      title: "Exemple de calendrier de type 'calendar' vide",
+      type: "calendar",
+      day_slot_set: [
+        {
+          days: [0, 1, 2, 3, 4, 5, 6],
+          time_slot: [
+            {
+              start: 0,
+              instruction: EeventTypes.away,
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+export const eventTypeData: TeventTypeData = {
+  eventPlace_id: "e2076d6a-9d6d-4b93-9ce0-a41f04c38c40",
+  [EeventTypes.appointement]: "", // No need to put some text here for this type of schedule but this value is required
+  [EeventTypes.away]: "Pas de rendez-vous", // This value is required too
+};
+
+
+```
+
+### The HomePage (for demo)
+
+```javascript
+import { Link } from "react-router-dom";
+
+const HomePage = () => {
+  return (
+    <div>
+       <Link style={{fontSize:18}}
+        data-testid="demo-button"
+        to={`/schedule/`}
+      >
+        Go to demo...
+      </Link>
+      <h1>Go to Schedule view</h1>
+     
+    </div>
+  );
+};
+
+export default HomePage;
+
+```
 
 ## :pencil2: Contributing
 
