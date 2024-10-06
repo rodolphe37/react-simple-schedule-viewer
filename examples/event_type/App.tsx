@@ -1,26 +1,20 @@
 import { Suspense, useEffect, useState } from "react";
-import "../App.css";
+import "../../App.css";
 import { Route, Routes } from "react-router-dom";
-import { useTheme } from "../theme/useTheme";
-import {
-  TcolorCellByEvents,
-  TeventsTextColor,
-} from "../dataTypes";
 import { contentForModal } from "./dataCards";
-import HomePage from "../HomePage";
 import { EeventTypes, eventTypeData, scheduleByEventPlace } from "./eventData";
 
 import Schedule from "react-simple-schedule-viewer";
+import { TcolorCellByEvents, TeventsTextColor } from "./dataTypes";
+import {useTheme} from "../theme/useTheme";
+import HomePage from "../HomePage"
 import React from "react";
-
 
 function App() {
   //  Variables for the Schedule component
   const weekStartsOn = 0;
   const { theme, setTheme } = useTheme();
   const [isDarkMode] = useState(theme === "dark" ? true : false);
-
-
 
   // the default order of background colors in the array is
   const colorCellByEvents: TcolorCellByEvents = {
