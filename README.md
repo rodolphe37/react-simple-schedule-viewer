@@ -938,6 +938,16 @@ function App() {
                 eventsNameUs={eventsNameUs}
                 eventsName={eventsName}
                 eventTypeData={eventTypeData}
+                  // If you want to display the number of the day on each day names
+                // withDays={false}
+                  // If you want to display a list with all schedules before the calendar view 
+                // withList={false}
+                  // If you want to display a return button to the list of schedules 
+                // withListReturnButton={true}
+                  // If you display a return button, the french button text 
+                // withListButtonName="Retourner à la page d'acceuil"
+                  // If you display a return button, the english button text 
+                // withListButtonNameUs="Go to HomePage"
               />
             </Suspense>
           }
