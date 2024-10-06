@@ -19,7 +19,7 @@
 
 ## Quick Links
 
-[Picture demo](#pictures-demo)
+[Pictures demo](#pictures-demo)
 
 [Live demo](#Live-demo)
 
@@ -56,7 +56,7 @@
 
 ---
 
-## pictures demo :
+## pictures demo
 
 > ### Event type:
 >
