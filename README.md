@@ -110,10 +110,10 @@
 
 ## install dependency
 
-- as react-router-dom, recoil & react error-boundary are peer dependencies, you need to install it first.
+- as react-router-dom, recoil & react-error-boundary are dev dependencies of the package, you need to install it first as dev dependencies in your app.
 
 ```
-yarn add react-router-dom recoil react-error-boundary
+yarn add -D react-router-dom recoil react-error-boundary
 ```
 
 > of course, like all react application wich use react router dom, you need to wrap your App element with a provider into the main.tsx page like that:
