@@ -46,7 +46,7 @@
 ### Live demo
 
 > To see the live demo:
-> [Click here](https://bright-jalebi-193c3a.netlify.app/)
+> [Click here](https://starlit-figolla-146412.netlify.app/)
 
 ### install dependency
 
