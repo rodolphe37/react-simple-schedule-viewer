@@ -17,6 +17,45 @@
 
 ---
 
+## Quick Links
+
+[Picture demo](#pictures-demo)
+
+[Live demo](#Live-demo)
+
+[Install dependency](#install-dependency)
+
+[Install library](#install-library)
+
+[API](#API)
+
+[Usage](#Usage)
+
+  - [Event type view](#Event-type-view)
+
+  - [Temp type view](#Temperature-type-view)
+
+
+[Contributing](#Contributing)
+
+[Reporting Issues](#Reporting-Issues)
+
+[compatibility](#compatibility)
+
+[Author](#bust_in_silhouette-author)
+
+[Feature Requests](#Feature-Requests)
+
+[A few words from the author](#large_blue_diamond-a-few-words-from-the-author)
+
+[Support the project](#sparkling_heart-support-the-project)
+
+[License](#scroll-license)
+
+[My other projects](#my-other-projects)
+
+---
+
 ## pictures demo :
 
 > ### Event type:
@@ -1102,7 +1141,94 @@ Have an idea for a new feature? Please open an issue with a detailed description
 
 Thank you for your interest in contributing to `react-simple-schedule-viewer`!
 
+# :bust_in_silhouette: Author
+
+- Thought, designed and developed with :purple_heart: by Rodolphe Augusto
+
+---
+
+# :large_blue_diamond: A few words from the author
+
+Enjoy the World :smirk:
+
+---
+
+# :sparkling_heart: Support the project
+
+I put almost everything open-source I can, and try to accommodate anyone who needs help using these projects. Obviously,
+this takes time. You can use this service for free.
+
+However, if you are using this project and are happy with it or just want to encourage me to keep creating: -
+
+- Put a star and share the project :rocket:
+
+Thank you! :heart:
+
+---
 
 ## License
 
 The MIT License.
+
+
+# My other projects:
+
+>### react-wheel-time-picker
+>https://www.npmjs.com/package/react-wheel-time-picker
+
+>### My Simple Tutorial Creator
+>https://github.com/rodolphe37/my-simple-tutorial-creator
+
+>### My Simple Cam
+>https://github.com/rodolphe37/my-simple-cam-dektop-app
+
+>### My SimpleTasks Manager (software version for Linux, Mac & Windows)
+>https://github.com/rodolphe37/my-simple-tasks-manager-desktop-version
+
+>### QRCode Tools
+>https://github.com/rodolphe37/qr-code-tools
+
+>### App for decrypt greenPass europe QRcode
+>https://github.com/rodolphe37/qrcode-decoder
+
+>### Css animation with Create React App base.
+>https://github.com/rodolphe37/halloween2021-bat-tuto-youtube-video
+
+>### My GitHub "open Sources" project
+>https://github.com/rodolphe37/pwa-react-project
+
+>### cra-template-github-my-profile
+>https://github.com/rodolphe37/cra-template-github-my-profile
+
+>### My Awesome Custom Alert
+>https://github.com/rodolphe37/my-awesome-custom-alert
+
+>### Geolocation starter app React-native
+>https://github.com/rodolphe37/react-native_geolocation-tracker
+
+>### Classic React Ultimate Messenger version repository (for open sources contributors)
+>https://github.com/rodolphe37/rum-open-sources
+
+>### React Ultimate Messenger template for React (create-react-app tools)
+>https://github.com/rodolphe37/cra-react-ultimate-messenger
+
+>### PWA React Ultimate Messenger template for React (create-react-app tools)
+>https://github.com/rodolphe37/cra-pwa-react-ultimate-messenger
+
+>### installation and initialization shell script for the PWA React Ultimate Messenger template
+>https://github.com/rodolphe37/pwa-rum-install-pack
+
+>### Upload-image-profil-component
+>https://github.com/rodolphe37/Upload-image-profil-component
+
+>### Jeux libres de droits "open Sources" - Memory Yoga Cards Game - Sort the Waste Game - Match 3 Yoga Game - Tetris Classic Game - Remake Earth Puzzle Game
+>https://github.com/rodolphe37/install-games-repository
+
+>### Administration template - React JS & react-admin
+>https://github.com/rodolphe37/nfc-updates-front
+
+
+>### Administration template Backend - Node & Express
+>https://github.com/rodolphe37/nfc-updates-back
+
+---
