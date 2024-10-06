@@ -100,9 +100,6 @@ const ParametersDetails = ({
     },
   ];
 
-  console.log("newArrayForEventType", newArrayForEventType);
-  console.log("eventWithNewNames", eventWithNewNames);
-  // console.log("modalContent", modalContent);
 
   return (
     <div

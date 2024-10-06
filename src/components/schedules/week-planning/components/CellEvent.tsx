@@ -103,7 +103,6 @@ const CellEvent = ({
 
   const isFrenchDegree = locale == "fr" ? ` °C` : ` °F`;
 
-  console.log("currentEventType?.key",currentEventType?.key)
 
   return (
     <>

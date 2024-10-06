@@ -3,12 +3,12 @@ import "../App.css";
 import { Route, Routes } from "react-router-dom";
 import { TcolorCellByEvents, TeventsName, TeventsTextColor } from "./dataTypes";
 import { eventTypeData, scheduleByEventPlace } from "./eventData";
-
-
-import Schedule from "react-simple-schedule-viewer";
 import React from "react";
 import { useTheme } from "../theme/useTheme";
 import HomePage from "../HomePage";
+
+import Schedule from "react-simple-schedule-viewer";
+
 
 
 
