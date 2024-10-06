@@ -1425,6 +1425,11 @@ const HomePage = () => {
 export default HomePage;
 
 ```
+## Last precision
+> - You can combine all schedule types at the same time,
+> - if you want to see how, there is a link to the complex demo repository wich combine all schedules type together.
+> [Full types](https://github.com/rodolphe37/simple-schedule-library-example)
+---
 
 ## :pencil2: Contributing
 
