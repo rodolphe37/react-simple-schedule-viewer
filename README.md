@@ -29,18 +29,16 @@
 
 [API](#API)
 
-[Usage](#Usage)
+[Usage](#dart-Usage)
 
   - [Event type view](#Event-type-view)
 
   - [Temp type view](#Temperature-type-view)
 
 
-[Contributing](#Contributing)
+[Contributing](#pencil2-Contributing)
 
 [Reporting Issues](#Reporting-Issues)
-
-[compatibility](#compatibility)
 
 [Author](#bust_in_silhouette-author)
 
@@ -138,7 +136,7 @@ yarn add react-simple-schedule-viewer
 | withListButtonNameUs | String (optional)  | `""`                                   |  you can add an English text for the button                                                         |
 | withListReturnButton | Boolean (optional) | `false`                                | when the list is true you can add a return button by setting the value to true |                                                         |
 
-## Usage
+## :dart: Usage
 
 > ### heavy_exclamation_mark: important
 >
@@ -1127,7 +1125,7 @@ export default HomePage;
 ```
 
 
-## Contributing
+## :pencil2: Contributing
 
 Contributions to `react-simple-schedule-viewer` are welcome! If you have any issues, feature requests, or improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/rodolphe37/react-simple-schedule-viewer). Your feedback and support are highly appreciated!
 
