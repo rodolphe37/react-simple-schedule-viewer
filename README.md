@@ -140,9 +140,9 @@ yarn add react-simple-schedule-viewer
 
 > ### :heavy_exclamation_mark: important
 >
-> > ### the time value expected is only in minutes from 0 to 1440.
+> > ### :heavy_exclamation_mark: the time value expected is only in minutes from 0 to 1440.
 > >
-> > ### the expected range is by 15 min intervals only
+> > ###  :heavy_exclamation_mark: the expected range is by 15 min intervals only
 >
 > > > #### [Link to the complete 24h values by 15 mins range ](./HOURSRANGE.md "full range of value from 0 to 1440")
 
