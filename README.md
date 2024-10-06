@@ -101,17 +101,21 @@
 >
 >![Normal modal](demo/pictures/normalModal.png)
 
+---
+
 ## Live demo
 
 > To see the live demo:
 > [Click here](https://steady-hamster-02673e.netlify.app/)
 
-## install dependency
+----
 
-- as react-router-dom, recoil & react-error-boundary are dev dependencies of the package, you need to install it first as dev dependencies in your app.
+## install dependencies
 
-```
-yarn add -D react-router-dom recoil react-error-boundary
+- as react-router-dom is a dependency of the package, you need to install it first as dependencies in your app.
+
+```bash
+yarn add react-router-dom
 ```
 
 > of course, like all react application wich use react router dom, you need to wrap your App element with a provider into the main.tsx page like that:
@@ -124,6 +128,11 @@ yarn add -D react-router-dom recoil react-error-boundary
   </BrowserRouter>
   ...
 ```
+- recoil & react-error-boundary are dev dependencies of the package, you need to install it first as dev dependencies in your app.
+```bash
+yarn add -D recoil react-error-boundary
+```
+---
 
 ## install library
 
