@@ -81,15 +81,26 @@
 >
 > English - Light & Dark mode
 > ![French - Light](demo/pictures/calendar-en-light.png)
-
+---
 > ### Some cool features:
 >
 > start & end time indication (only in french for the moment, sorry!)
+>
 > ![Hours indicator](demo/pictures/hours-indicator.png)
 >
-> English - Light & Dark mode
-> <video src="/demo/pictures/auto-scroll.mp4" controls="controls" style="max-width: 730px;">
-</video>
+---
+> Auto scroll to the first event.
+>
+> ![Auto scroll](demo/pictures/auto-scroll.gif)
+>
+---
+> custom modal content (only for the 'event' type of schedule).
+>
+> ![custom modal](demo/pictures/customModal.png)
+>
+>The normal modal for all other schedule types is:
+>
+>![Normal modal](demo/pictures/normalModal.png)
 
 ## Live demo
 
