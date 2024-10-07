@@ -424,7 +424,7 @@ import { getSchedulesByEventPlaceIdResponse, TeventTypeData } from "../../dataTy
   }
   //   Mocked data for example - set the price of each event for example
   export const eventTypeData: TeventTypeData = {
-    eventPlace_id: "e2076d6a-9d6d-4b93-9ce0-a41f04c38c40", // If you have many places with different prices this id must be unique
+    eventPlace_id: "b4514cca-bd0f-4876-a3c3-b77444c047b4", // If you have many places with different prices this id must be unique
     [EeventTypes.food]: "12.5 Euros",
     [EeventTypes.concert]: "20 Euros",
     [EeventTypes.game_force]: "21 Euros",
@@ -437,7 +437,7 @@ import { getSchedulesByEventPlaceIdResponse, TeventTypeData } from "../../dataTy
   export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
     schedules: [
       {
-        id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7", // Unique schedule id identifier
+        id: "56a2bd7c-a898-4502-8414-fa4ace79e749", // Unique schedule id identifier
         title: "Exemple de calendrier de type 'event'", // title of the event
         type: "event", // type of the event (event - temperature - calendar)
         day_slot_set: [
@@ -590,7 +590,7 @@ import { getSchedulesByEventPlaceIdResponse, TeventTypeData } from "../../dataTy
         ],
       },
       {
-        id: "89d07045-095f-4e15-b03c-6450a8ab4264",
+        id: "40f80dba-ab6c-4f71-8a4d-51ce439e9b44",
         title: "Exemple de calendrier de type 'event' vide",
         type: "event",
         day_slot_set: [
@@ -620,7 +620,7 @@ import { EeventTypes } from "./enum";
 
 export const contentForModal = [
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7", // The id of the schedule
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749", // The id of the schedule
     day: 0, // The day of the event
     eventType: EeventTypes.concert, // The event type - for this example it's the eventType_2 based with the enum name
     startTime: 1230, // The start time of the event - the end of this event is defined by the next start time event
@@ -641,7 +641,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 3,
     eventType: EeventTypes.concert,
     startTime: 450,
@@ -663,7 +663,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 1,
     eventType: EeventTypes.concert,
     startTime: 1020,
@@ -685,7 +685,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 1,
     eventType: EeventTypes.game_force,
     startTime: 900,
@@ -707,7 +707,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 4,
     eventType: EeventTypes.game_force,
     startTime: 480,
@@ -729,7 +729,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 5,
     eventType: EeventTypes.game_dark,
     startTime: 450,
@@ -751,7 +751,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 2,
     eventType: EeventTypes.game_dark,
     startTime: 495,
@@ -773,7 +773,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 2,
     eventType: EeventTypes.game_dark,
     startTime: 900,
@@ -795,7 +795,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 0,
     eventType: EeventTypes.lecture,
     eventTitle: "Marvel Conf",
@@ -817,7 +817,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 0,
     eventType: EeventTypes.game_dark,
     startTime: 900,
@@ -839,7 +839,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 1,
     eventType: EeventTypes.lecture,
     eventTitle: "Marvel Conf",
@@ -861,7 +861,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 0,
     eventType: EeventTypes.food,
     eventTitle: "Food Party",
@@ -883,7 +883,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 1,
     eventType: EeventTypes.food,
     eventTitle: "Food Party",
@@ -905,7 +905,7 @@ export const contentForModal = [
     ),
   },
   {
-    id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7",
+    id: "56a2bd7c-a898-4502-8414-fa4ace79e749",
     day: 2,
     eventType: EeventTypes.food,
     eventTitle: "Food Party",
@@ -1142,7 +1142,7 @@ export enum EeventTypes {
 export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
   schedules: [
     {
-      id: "48a39d16-4acf-496c-a14d-106666dfd740",
+      id: "f00b3838-4906-4549-a299-0ed334937ab3",
       title: "Exemple de calendrier  de type 'temp'",
       type: "temp",
       day_slot_set: [
@@ -1187,7 +1187,7 @@ export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
       ],
     },
     {
-      id: "c81458c3-a4d5-4702-8b3f-09e2fd0fe17b",
+      id: "0dabee1d-0d06-4245-9c2c-235d28817cd0",
       title: "Exemple de calendrier de type 'temp' vide",
       type: "temp",
       day_slot_set: [
@@ -1206,7 +1206,7 @@ export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
 };
 
 export const eventTypeData: TeventTypeData = {
-  eventPlace_id: "e2076d6a-9d6d-4b93-9ce0-a41f04c38c40",
+  eventPlace_id: "b4514cca-bd0f-4876-a3c3-b77444c047b4",
   [EeventTypes.presence_1]: "19",
   [EeventTypes.presence_2]: "20",
   [EeventTypes.presence_3]: "21",
@@ -1400,7 +1400,7 @@ import {
 export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
   schedules: [
     {
-      id: "5bfaefe7-a189-40de-bd8c-468bd4ff0e77",
+      id: "d86ae448-012e-4f87-a7e5-d8e667346ea6",
       title: "Exemple de calendrier de type 'calendar'",
       type: "calendar",
       day_slot_set: [
@@ -1424,7 +1424,7 @@ export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
       ],
     },
     {
-      id: "47cdbc5a-74a9-47c6-a5ca-4c285748889b",
+      id: "61d6024f-8d18-43dc-8cdc-9c38c796b93b",
       title: "Exemple de calendrier de type 'calendar' vide",
       type: "calendar",
       day_slot_set: [
@@ -1443,7 +1443,7 @@ export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
 };
 
 export const eventTypeData: TeventTypeData = {
-  eventPlace_id: "e2076d6a-9d6d-4b93-9ce0-a41f04c38c40",
+  eventPlace_id: "b4514cca-bd0f-4876-a3c3-b77444c047b4",
   [EeventTypes.appointement]: "", // No need to put some text here for this type of schedule but this value is required
   [EeventTypes.away]: "Pas de rendez-vous", // This value is required too
 };
