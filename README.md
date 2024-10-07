@@ -59,6 +59,12 @@
 
 ## pictures demo
 
+> ### Base design:
+>
+> The base design of this library is made with taillwindcss
+> ![French - Light](demo/pictures/base-design.png)
+
+
 > ### Event type:
 >
 > French - Light & Dark mode
