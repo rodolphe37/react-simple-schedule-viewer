@@ -287,23 +287,23 @@ function App() {
 
   // the default order of background colors in the array is
   const colorCellByEvents: TcolorCellByEvents = {
-    [EeventTypes.food]: "#FFF2C4", // eventType_1 - required
-    [EeventTypes.concert]: "#FED7AD", // eventType_2 - optional
-    [EeventTypes.game_force]: "#DBFFE2", // eventType_3 - optional
-    [EeventTypes.game_dark]: "#F6D1FF", // eventType_4 - optional
-    [EeventTypes.lecture]: "#A0ABC0", // eventType_5 - optional
-    [EeventTypes.closed]: isDarkMode ? "#2D3648" : "#EDF0F7", // eventType_6 - required - is always the away, closed or absent event
-    // eventType_7: "#B0DCFF", // eventType_7 - optional - unused in this example
+    [EeventTypes.food]: "#FFECC8", // eventType_1 - required
+    [EeventTypes.concert]:"#FFAACF", // eventType_2 - optional
+    [EeventTypes.game_force]: "#BFF6C3", // eventType_3 - optional
+    [EeventTypes.game_dark]: "#CDC1FF", // eventType_4 - optional
+    [EeventTypes.lecture]: "#7BD3EA", // eventType_5 - optional
+    [EeventTypes.closed]: isDarkMode ? "#2D3648" : "#f3f3f3", // eventType_6 - required - is always the away, closed or absent event
+    // eventType_7: "#FFDEFA", // eventType_7 - optional - unused in this example
   };
   // the default order of text colors in the array is
   const eventsTextColor: TeventsTextColor = {
-    [EeventTypes.food]: "#B99100", // eventType_1 - required
-    [EeventTypes.concert]: "#D46E00", // eventType_2 - optional
-    [EeventTypes.game_force]: "#00B51E", // eventType_3 - optional
-    [EeventTypes.game_dark]: "#F134F7", // eventType_4 - optional
-    [EeventTypes.lecture]: "#FFFFFF", // eventType_5 - optional
-    [EeventTypes.closed]: "#a0abc0", // eventType_6 - required - is always the away, closed or absent event
-    // eventType_7: "#0196EC", // eventType_7 - optional -- unused in this example
+    [EeventTypes.food]: "#c8a026", // eventType_1 - required
+    [EeventTypes.concert]: "#7b2e7b", // eventType_2 - optional
+    [EeventTypes.game_force]: "#0eb318", // eventType_3 - optional
+    [EeventTypes.game_dark]: "#756AB6", // eventType_4 - optional
+    [EeventTypes.lecture]: "#1e646e", // eventType_5 - optional
+    [EeventTypes.closed]: "#84878a", // eventType_6 - required - is always the away, closed or absent event
+    // eventType_7: "#B97A95", // eventType_7 - optional -- unused in this example
   };
 
 // Just for the demo
@@ -979,23 +979,23 @@ function App() {
 
   // the default order of background colors in the array is
   const colorCellByEvents: TcolorCellByEvents = {
-    [EeventTypes.presence_1]: "#FFF2C4", // eventType_1 - required
-    [EeventTypes.presence_2]: "#FED7AD", // eventType_2 - optional
-    [EeventTypes.presence_3]: "#DBFFE2", // eventType_3 - optional
-    [EeventTypes.presence_4]: "#F6D1FF", // eventType_4 - optional
-    [EeventTypes.eco]: "#A0ABC0", // eventType_5 - optional
-    [EeventTypes.away]: isDarkMode ? "#2D3648" : "#EDF0F7", // eventType_6 - required - is always the away, closed or absent event
-    // eventType_7: "#B0DCFF", // eventType_7 - optional
+    [EeventTypes.presence_1]: "#FFECC8", // eventType_1 - required
+    [EeventTypes.presence_2]: "#FFAACF", // eventType_2 - optional
+    [EeventTypes.presence_3]: "#BFF6C3", // eventType_3 - optional
+    [EeventTypes.presence_4]: "#CDC1FF", // eventType_4 - optional
+    [EeventTypes.eco]: "#7BD3EA", // eventType_5 - optional
+    [EeventTypes.away]: isDarkMode ? "#2D3648" : "#f3f3f3", // eventType_6 - required - is always the away, closed or absent event
+    // eventType_7: "#FFDEFA", // eventType_7 - optional
   };
   // the default order of text colors in the array is
   const eventsTextColor: TeventsTextColor = {
-    [EeventTypes.presence_1]: "#B99100", // eventType_1 - required
-    [EeventTypes.presence_2]: "#D46E00", // eventType_2 - optional
-    [EeventTypes.presence_3]: "#00B51E", // eventType_3 - optional
-    [EeventTypes.presence_4]: "#F134F7", // eventType_4 - optional
-    [EeventTypes.eco]: "#FFFFFF", // eventType_5 - optional
-    [EeventTypes.away]: "#a0abc0", // eventType_6 - required - is always the away, closed or absent event
-    // eventType_7: "#0196EC", // eventType_7 - optional
+    [EeventTypes.presence_1]: "#c8a026", // eventType_1 - required
+    [EeventTypes.presence_2]: "#7b2e7b", // eventType_2 - optional
+    [EeventTypes.presence_3]: "#0eb318", // eventType_3 - optional
+    [EeventTypes.presence_4]: "#756AB6", // eventType_4 - optional
+    [EeventTypes.eco]: "#1e646e", // eventType_5 - optional
+    [EeventTypes.away]: "#84878a", // eventType_6 - required - is always the away, closed or absent event
+    // eventType_7: "#B97A95", // eventType_7 - optional
   };
 
   // This is for TEMP & CALENDAR type of schedule, the names of all eventTypes.
@@ -1268,13 +1268,13 @@ function App() {
 
   // the default order of background colors in the array is
   const colorCellByEvents: TcolorCellByEvents = {
-    [EeventTypes.appointement]: "#B0DCFF", // eventType_1 - required
-    [EeventTypes.away]: isDarkMode ? "#2D3648" : "#EDF0F7", // eventType_6 - required - is always the away, closed or absent event
+    [EeventTypes.appointement]: "#FFDEFA", // eventType_1 - required
+    [EeventTypes.away]: isDarkMode ? "#2D3648" : "#f3f3f3", // eventType_6 - required - is always the away, closed or absent event
   };
   // the default order of text colors in the array is
   const eventsTextColor: TeventsTextColor = {
-    [EeventTypes.appointement]: "#0196EC", // eventType_1 - required
-    [EeventTypes.away]: "#a0abc0", // eventType_6 - required - is always the away, closed or absent event
+    [EeventTypes.appointement]: "#B97A95", // eventType_1 - required
+    [EeventTypes.away]: "#84878a", // eventType_6 - required - is always the away, closed or absent event
   };
 
   // This is for TEMP & CALENDAR type of schedule, the names of all eventTypes.

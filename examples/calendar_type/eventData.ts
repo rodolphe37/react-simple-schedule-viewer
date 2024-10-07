@@ -13,7 +13,7 @@ export enum EeventTypes {
 export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
   schedules: [
     {
-      id: "5bfaefe7-a189-40de-bd8c-468bd4ff0e77",
+      id: "d86ae448-012e-4f87-a7e5-d8e667346ea6",
       title: "Exemple de calendrier de type 'calendar'",
       type: "calendar",
       day_slot_set: [
@@ -37,7 +37,7 @@ export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
       ],
     },
     {
-      id: "47cdbc5a-74a9-47c6-a5ca-4c285748889b",
+      id: "61d6024f-8d18-43dc-8cdc-9c38c796b93b",
       title: "Exemple de calendrier de type 'calendar' vide",
       type: "calendar",
       day_slot_set: [
@@ -56,7 +56,7 @@ export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
 };
 
 export const eventTypeData: TeventTypeData = {
-  eventPlace_id: "e2076d6a-9d6d-4b93-9ce0-a41f04c38c40",
+  eventPlace_id: "b4514cca-bd0f-4876-a3c3-b77444c047b4",
   [EeventTypes.appointement]: "",
   [EeventTypes.away]: "Pas de rendez-vous",
 };

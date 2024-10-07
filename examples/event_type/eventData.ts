@@ -27,7 +27,7 @@ export const eventTypeData: TeventTypeData = {
 export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
   schedules: [
     {
-      id: "a397f1fe-14bf-4ca3-af8c-e497b98451f7", // Unique schedule id identifier
+      id: "56a2bd7c-a898-4502-8414-fa4ace79e749", // Unique schedule id identifier
       title: "Exemple de calendrier de type 'event'", // title of the event
       type: "event", // type of the event (event - temperature - calendar)
       day_slot_set: [
@@ -180,7 +180,7 @@ export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
       ],
     },
     {
-      id: "89d07045-095f-4e15-b03c-6450a8ab4264",
+      id: "40f80dba-ab6c-4f71-8a4d-51ce439e9b44",
       title: "Exemple de calendrier de type 'event' vide",
       type: "event",
       day_slot_set: [

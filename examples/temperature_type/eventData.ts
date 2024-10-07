@@ -17,7 +17,7 @@ export enum EeventTypes {
 export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
   schedules: [
     {
-      id: "48a39d16-4acf-496c-a14d-106666dfd740",
+      id: "f00b3838-4906-4549-a299-0ed334937ab3",
       title: "Exemple de calendrier  de type 'temp'",
       type: "temp",
       day_slot_set: [
@@ -62,7 +62,7 @@ export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
       ],
     },
     {
-      id: "c81458c3-a4d5-4702-8b3f-09e2fd0fe17b",
+      id: "0dabee1d-0d06-4245-9c2c-235d28817cd0",
       title: "Exemple de calendrier de type 'temp' vide",
       type: "temp",
       day_slot_set: [
@@ -81,7 +81,7 @@ export const scheduleByEventPlace: getSchedulesByEventPlaceIdResponse = {
 };
 
 export const eventTypeData: TeventTypeData = {
-  eventPlace_id: "e2076d6a-9d6d-4b93-9ce0-a41f04c38c40",
+  eventPlace_id: "b4514cca-bd0f-4876-a3c3-b77444c047b4",
   [EeventTypes.presence_1]: "19",
   [EeventTypes.presence_2]: "20",
   [EeventTypes.presence_3]: "21",
