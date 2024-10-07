@@ -64,12 +64,15 @@ const Calendar = ({
   const currentDay = today.getDate();
   const actualDate = currentDay < 10 ? `0${currentDay}` : `${currentDay}`
   const currentNumber = calendarWithDaysFrench.find((res)=> res.includes(actualDate))
+  const currentUsNumber = calendarWithDaysUS.find((res)=> res.includes(actualDate))
   const currentDayOfWeek =
     locale === "fr"
       ? calendarWithDaysFrench.find((res)=> res === currentNumber)
-      : calendarWithDaysUS.find((res)=> res === currentNumber);
+      : calendarWithDaysUS.find((res)=> res === currentUsNumber);
 
 
+      console.log("actualDate",actualDate)
+      console.log("currentNumber",currentNumber)
   return (
     <ScrollProvider
       updateScroll={updateScroll}
@@ -94,13 +97,13 @@ const Calendar = ({
                           currentDayOfWeek === day
                             ? {
                                 color: isInDarkMode ? "#fff" : "#4d57ff",
-                                fontSize: "1.12rem",
+                                fontSize: "1.05rem",
                                 position: "relative",
                               }
                             : {}
                         }
                         key={day}
-                        className={`p-2 text-xs truncate md:text-base text-blue-600 dark:text-white -ml-6`}
+                        className={`p-2 text-base truncate md:text-base text-blue-600 dark:text-white -ml-6`}
                       >
                         {day}
                         {currentDayOfWeek === day ? (
@@ -126,13 +129,13 @@ const Calendar = ({
                           currentDayOfWeek === day
                             ? {
                                 color: isInDarkMode ? "#fff" : "#4d57ff",
-                                fontSize: "1.12rem",
+                                fontSize: "1.05rem",
                                 position: "relative",
                               }
                             : {}
                         }
                         key={day}
-                        className={`p-2 text-xs truncate md:text-base text-blue-600 dark:text-white -ml-6`}
+                        className={`p-2 text-base truncate md:text-base text-blue-600 dark:text-white -ml-6`}
                       >
                         {day}
                         {currentDayOfWeek === day ? (
@@ -155,7 +158,7 @@ const Calendar = ({
                 : calendarData.weekDayNames.map((day) => (
                     <div
                       key={day}
-                      className={`p-2 text-xs truncate md:text-base text-blue-600 dark:text-white -ml-6`}
+                      className={`p-2 text-base truncate md:text-base text-blue-600 dark:text-white -ml-6`}
                     >
                       {locale === "fr"
                         ? daysOfWeekNameFr(day)
