@@ -71,8 +71,6 @@ const Calendar = ({
       : calendarWithDaysUS.find((res)=> res === currentUsNumber);
 
 
-      console.log("actualDate",actualDate)
-      console.log("currentNumber",currentNumber)
   return (
     <ScrollProvider
       updateScroll={updateScroll}
