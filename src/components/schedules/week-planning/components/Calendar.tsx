@@ -3,6 +3,7 @@ import Cell from "./Cell";
 import {
   daysOfWeekNameFr,
   daysOfWeekNameUs,
+  extractNumbers,
   rangebyFifteenMinutes,
 } from "../utils/helpers";
 import { EventType } from "../models/models";
@@ -61,10 +62,13 @@ const Calendar = ({
     useGetDaysController(calendarData);
 
   const currentDay = today.getDate();
+  const actualDate = currentDay < 10 ? `0${currentDay}` : `${currentDay}`
+  const currentNumber = calendarWithDaysFrench.find((res)=> res.includes(actualDate))
   const currentDayOfWeek =
     locale === "fr"
-      ? calendarWithDaysFrench[currentDay]
-      : calendarWithDaysUS[currentDay];
+      ? calendarWithDaysFrench.find((res)=> res === currentNumber)
+      : calendarWithDaysUS.find((res)=> res === currentNumber);
+
 
   return (
     <ScrollProvider
