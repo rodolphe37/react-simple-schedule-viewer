@@ -1,6 +1,6 @@
 [![npm](https://img.shields.io/npm/v/react-simple-schedule-viewer)](https://www.npmjs.com/package/react-simple-schedule-viewer) ![downloads](https://img.shields.io/npm/dt/react-simple-schedule-viewer?color=blue&logo=npm&logoColor=blue)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/24d299dd-6b1e-49b0-965d-c0d103af4b75/deploy-status)](https://app.netlify.com/sites/steady-hamster-02673e/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8072144d-3c0f-4ee2-8280-9af2fea236ff/deploy-status)](https://app.netlify.com/sites/verdant-mandazi-690985/deploys)
 
 # React simple schedule viewer
 
@@ -32,12 +32,11 @@
 
 [Usage](#dart-Usage)
 
-  - [Event type view](#circus_tent-Event-type-view)
+- [Event type view](#circus_tent-Event-type-view)
 
-  - [Temp type view](#hotsprings-temperature-type-view)
+- [Temp type view](#hotsprings-temperature-type-view)
 
-  - [Calendar type](#calendar-calendar-type-view)
-
+- [Calendar type](#calendar-calendar-type-view)
 
 [Contributing](#pencil2-Contributing)
 
@@ -64,7 +63,6 @@
 > The base design of this library is made with taillwindcss
 > ![French - Light](demo/pictures/base-design.png)
 
-
 > ### Event type:
 >
 > French - Light & Dark mode
@@ -88,26 +86,30 @@
 >
 > English - Light & Dark mode
 > ![French - Light](demo/pictures/calendar-en-light.png)
+
 ---
+
 > ### Some cool features:
 >
 > start & end time indication (only in french for the moment, sorry!)
 >
 > ![Hours indicator](demo/pictures/hours-indicator.png)
->
+
 ---
+
 > Auto scroll to the first event.
 >
 > ![Auto scroll](demo/pictures/auto-scroll.gif)
->
+
 ---
+
 > custom modal content (only for the 'event' type of schedule).
 >
 > ![custom modal](demo/pictures/customModal.png)
 >
->The normal modal for all other schedule types is:
+> The normal modal for all other schedule types is:
 >
->![Normal modal](demo/pictures/normalModal.png)
+> ![Normal modal](demo/pictures/normalModal.png)
 
 ---
 
@@ -116,16 +118,15 @@
 > To see the live demo:
 > [Click here](https://steady-hamster-02673e.netlify.app/)
 
-----
+---
 
 ## install dependencies
 
 - as react-router-dom is a dependency of the package, you need to install it first as dependencies in your app.
 
->
 > for info:
->- [react-router-dom npm registry](https://www.npmjs.com/package/react-router-dom)
 >
+> - [react-router-dom npm registry](https://www.npmjs.com/package/react-router-dom)
 
 ```bash
 yarn add react-router-dom
@@ -141,18 +142,18 @@ yarn add react-router-dom
   </BrowserRouter>
   ...
 ```
+
 - recoil & react-error-boundary are dev dependencies of the package, you need to install it first as dev dependencies in your app.
 
->
 > for info:
+>
 > - [recoil npm registry](https://www.npmjs.com/package/recoil)
 > - [react-error-boundary npm registry](https://www.npmjs.com/package/react-error-boundary)
->
-
 
 ```bash
 yarn add -D recoil react-error-boundary
 ```
+
 ---
 
 ## install library
@@ -170,75 +171,82 @@ yarn add react-simple-schedule-viewer
 ## API
 
 | Name                 | Type               | Default                                | Description                                                                    |
-| -------------------- | ------------------ | -------------------------------------- | ------------------------------------------------------------------------------ |
+| -------------------- | ------------------ | -------------------------------------- | ------------------------------------------------------------------------------ | --- |
 | scheduleByEventPlace | Object (required)  | `{ schedules: [] }`                    | The data object for the schedule.                                              |
 | weekStartsOn         | Number (required)  | `0`                                    | The day of the week start                                                      |
 | isInDarkMode         | Boolean (required) | `false`                                | For dark mode support.                                                         |
 | colorCellByEvents    | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | The colors of the cells.                                                       |
 | eventsTextColor      | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | the color for the text cells calendar.                                         |
-| locale               | String (required)  | `"fr" `                                | for fr/en support.                |
+| locale               | String (required)  | `"fr" `                                | for fr/en support.                                                             |
 | eventsNameUs         | Object (optional)  | `{ eventType_1: "", eventType_6: "" }` | the events name in us version.                                                 |
 | eventsName           | Object (optional)  | `{ eventType_1: "", eventType_6: "" }` | the events name in fr version.                                                 |
-| eventTypeData        | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | The value of each event (prices, degrees, or other infos).                                                       |
+| eventTypeData        | Object (required)  | `{ eventType_1: "", eventType_6: "" }` | The value of each event (prices, degrees, or other infos).                     |
 | modalContent         | Array (optional)   | `[]`                                   | Custom modal content (event type only)                                         |
 | withDays             | boolean (optional) | `false`                                | display the day of each week days.                                             |
 | withList             | Boolean (optional) | `false`                                | display a list of the schedules before the calendar view.                      |
-| withListButtonName   | String (optional)  | `""`                                   | when the list is true you can add a french text for the return button |
-| withListButtonNameUs | String (optional)  | `""`                                   |  you can add an English text for the button                                                         |
-| withListReturnButton | Boolean (optional) | `false`                                | when the list is true you can add a return button by setting the value to true |                                                         |
-
-
+| withListButtonName   | String (optional)  | `""`                                   | when the list is true you can add a french text for the return button          |
+| withListButtonNameUs | String (optional)  | `""`                                   | you can add an English text for the button                                     |
+| withListReturnButton | Boolean (optional) | `false`                                | when the list is true you can add a return button by setting the value to true |     |
 
 ## Some precision about options
 
 #### All options are available in english language too, without intl or i18n...
+
 ---
-> - weekStartsOn : 
+
+> - weekStartsOn :
 >
 > you can choice the default day of the beginning of the schedule.
->
+
 ---
+
 ---
-> - eventsNameUs & eventsName & modalContent : 
+
+> - eventsNameUs & eventsName & modalContent :
 >
 > These three variables are used only for the 'event' type schedule. for the other types you don't need to implement it.
->
+
 ---
+
 ---
-> - withDays : 
+
+> - withDays :
 >
 > That variable display the current month on top & indicate the current day with a red point & a more stronger font size. This option is by default for the calendar type (in this case, it's no need to put this variable to the Schedule props).
 >
-> ![withDay light option](demo/pictures/options/withDay.png)
-> ![withDay dark option](demo/pictures/options/withDay-dark.png)
+> ![withDay light option](demo/pictures/options/withDay.png) > ![withDay dark option](demo/pictures/options/withDay-dark.png)
 
 ---
+
 ---
 
 > - withList :
 >
 > This option display a list of your schedules before the calendar view, with a return button logic.
 >
-> ![withDay light option](demo/pictures/options/withList.png)
-> ![withDay dark option](demo/pictures/options/withListDark.png)
+> ![withDay light option](demo/pictures/options/withList.png) > ![withDay dark option](demo/pictures/options/withListDark.png)
 
 ---
+
 ---
 
 > - withListReturnButton :
 >
 > This option display a button to return to your home page for example. This option is used when the withList boolean is true.
 >
-> Example : 
+> Example :
+>
 > ```javascript
 > withListReturnButton={true}
 > withListButtonName="Retourner à la page d'acceuil"
 > withListButtonNameUs="Go to HomePage"
-
 > ```
 
-> ![withDay light option](demo/pictures/options/withReturnButton.png)
-> ![withDay dark option](demo/pictures/options/withReturnButtonDark.png)
+> ```
+>
+> ```
+
+> ![withDay light option](demo/pictures/options/withReturnButton.png) > ![withDay dark option](demo/pictures/options/withReturnButtonDark.png)
 
 ---
 
@@ -248,7 +256,7 @@ yarn add react-simple-schedule-viewer
 >
 > > ### :heavy_exclamation_mark: the time value expected is only in minutes from 0 to 1440.
 > >
-> > ###  :heavy_exclamation_mark: the expected range is by 15 min intervals only
+> > ### :heavy_exclamation_mark: the expected range is by 15 min intervals only
 >
 > > > #### [Link to the complete 24h values by 15 mins range ](./HOURSRANGE.md "full range of value from 0 to 1440")
 
@@ -263,13 +271,10 @@ yarn add react-simple-schedule-viewer
 import { Suspense, useEffect, useState } from "react";
 import "../App.css";
 import { Route, Routes } from "react-router-dom";
-// If you don't have light & dark theme, you can skip this import & set false to isInDarkMode Schedule props 
+// If you don't have light & dark theme, you can skip this import & set false to isInDarkMode Schedule props
 import { useTheme } from "../useTheme";
 // All types for the Schedule
-import {
-  TcolorCellByEvents,
-  TeventsTextColor,
-} from "../dataTypes";
+import { TcolorCellByEvents, TeventsTextColor } from "../dataTypes";
 // The content for each event modal
 import { contentForModal } from "./dataCards";
 // Home page example
@@ -288,7 +293,7 @@ function App() {
   // the default order of background colors in the array is
   const colorCellByEvents: TcolorCellByEvents = {
     [EeventTypes.food]: "#FFECC8", // eventType_1 - required
-    [EeventTypes.concert]:"#FFAACF", // eventType_2 - optional
+    [EeventTypes.concert]: "#FFAACF", // eventType_2 - optional
     [EeventTypes.game_force]: "#BFF6C3", // eventType_3 - optional
     [EeventTypes.game_dark]: "#CDC1FF", // eventType_4 - optional
     [EeventTypes.lecture]: "#7BD3EA", // eventType_5 - optional
@@ -306,7 +311,7 @@ function App() {
     // eventType_7: "#B97A95", // eventType_7 - optional -- unused in this example
   };
 
-// Just for the demo
+  // Just for the demo
   useEffect(() => {
     if (isDarkMode) {
       setTheme("dark");
@@ -318,7 +323,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage />} /> 
+        <Route path="/" element={<HomePage />} />
         <Route
           path="/schedule/*" // The path imperatively must be '/schedule/*'
           element={
@@ -332,17 +337,16 @@ function App() {
                 locale={"fr"}
                 eventTypeData={eventTypeData}
                 modalContent={contentForModal}
-                  // If you want to display the number of the day on each day names
+                // If you want to display the number of the day on each day names
                 // withDays={false}
-                  // If you want to display a list with all schedules before the calendar view 
+                // If you want to display a list with all schedules before the calendar view
                 // withList={false}
-                  // If you want to display a return button to the list of schedules 
+                // If you want to display a return button to the list of schedules
                 // withListReturnButton={true}
-                  // If you display a return button, the french button text 
+                // If you display a return button, the french button text
                 // withListButtonName="Retourner à la page d'acceuil"
-                  // If you display a return button, the english button text 
+                // If you display a return button, the english button text
                 // withListButtonNameUs="Go to HomePage"
-                
               />
             </Suspense>
           }
@@ -353,11 +357,10 @@ function App() {
 }
 
 export default App;
-
 ```
 
-
 ### The Typescript types file
+
 > - (the same for each type of schedule)
 
 ```javascript
@@ -611,6 +614,7 @@ import { getSchedulesByEventPlaceIdResponse, TeventTypeData } from "../../dataTy
 ```
 
 ### The contentForModal data
+
 > - only for event type
 
 ```javascript
@@ -625,7 +629,8 @@ export const contentForModal = [
     eventType: EeventTypes.concert, // The event type - for this example it's the eventType_2 based with the enum name
     startTime: 1230, // The start time of the event - the end of this event is defined by the next start time event
     eventTitle: "Englewood Concert", // The title
-    contentModal: ( // This variable get the JSX Element you want, can be card, external component...
+    // This variable get the JSX Element you want, can be card, external component...
+    contentModal: (
       <Fragment>
         <h1 style={{ fontWeight: "bold", padding: 10 }}>
           Event de lundi à 20:30 et réservation
@@ -651,9 +656,11 @@ export const contentForModal = [
         <h1 style={{ fontWeight: "bold", padding: 10 }}>
           Event de jeudi à 07:30 et réservation
         </h1>
-        <p style={{marginBottom:"1vh"}}>This is the place for the custom element (JSXElement)</p>
-        <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <p style={{ marginBottom: "1vh" }}>
+          This is the place for the custom element (JSXElement)
+        </p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -674,8 +681,8 @@ export const contentForModal = [
           Event du mardi à 17h info et réservation
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -696,8 +703,8 @@ export const contentForModal = [
           Event du mardi à 15h00 info
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -718,8 +725,8 @@ export const contentForModal = [
           Event du vendredi à 08h00 info
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -740,8 +747,8 @@ export const contentForModal = [
           Event du samedi à 07:30 info
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -762,8 +769,8 @@ export const contentForModal = [
           Event du mercredi à 08:15 info
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -784,8 +791,8 @@ export const contentForModal = [
           Event du mercredi à 15:00 info
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -806,8 +813,8 @@ export const contentForModal = [
           session de discussion sur les revues Marvel
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -828,8 +835,8 @@ export const contentForModal = [
           Event du lundi à 15:00 info
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -850,8 +857,8 @@ export const contentForModal = [
           session de discution sur les revues Marvel
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -872,8 +879,8 @@ export const contentForModal = [
           Event du lundi à 12:00 info
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -894,8 +901,8 @@ export const contentForModal = [
           Event du mardi à 12:00 info
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -916,8 +923,8 @@ export const contentForModal = [
           Event du lundi à 12:00 info
         </h1>
         <p>This is the place for the custom element (JSXElement)</p>
-         <h2 style={{fontWeight:"bold"}}>Text example</h2>
-         <p>
+        <h2 style={{ fontWeight: "bold" }}>Text example</h2>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
           quibusdam delectus esse! Excepturi, omnis sapiente at quo tempora
           eaque repellendus, a aspernatur impedit reiciendis laborum optio sed
@@ -927,7 +934,6 @@ export const contentForModal = [
     ),
   },
 ];
-
 ```
 
 ### The HomePage (for demo)
@@ -938,20 +944,19 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <div>
-       <Link style={{fontSize:18}}
+      <Link
+        style={{ fontSize: 18 }}
         data-testid="demo-button"
         to={`/schedule/`}
       >
         Go to demo...
       </Link>
       <h1>Go to Schedule view</h1>
-     
     </div>
   );
 };
 
 export default HomePage;
-
 ```
 
 ## :hotsprings: Temperature type view
@@ -959,6 +964,7 @@ export default HomePage;
 > This example is implemented with fake data for easily copy/paste in your project & adding more convenience for understanding the logic.
 
 > #### you can see the example code: [here](/examples/temperature_type/)
+
 ```javascript
 // App.tsx
 import { Suspense, useEffect, useState } from "react";
@@ -1028,8 +1034,8 @@ function App() {
 
   return (
     <div className="App">
-     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
         <Route
           path="/schedule/*"
           element={
@@ -1044,15 +1050,15 @@ function App() {
                 eventsNameUs={eventsNameUs}
                 eventsName={eventsName}
                 eventTypeData={eventTypeData}
-                  // If you want to display the number of the day on each day names
+                // If you want to display the number of the day on each day names
                 // withDays={false}
-                  // If you want to display a list with all schedules before the calendar view 
+                // If you want to display a list with all schedules before the calendar view
                 // withList={false}
-                  // If you want to display a return button to the list of schedules 
+                // If you want to display a return button to the list of schedules
                 // withListReturnButton={true}
-                  // If you display a return button, the french button text 
+                // If you display a return button, the french button text
                 // withListButtonName="Retourner à la page d'acceuil"
-                  // If you display a return button, the english button text 
+                // If you display a return button, the english button text
                 // withListButtonNameUs="Go to HomePage"
               />
             </Suspense>
@@ -1064,12 +1070,10 @@ function App() {
 }
 
 export default App;
-
-
 ```
 
-
 ### The Typescript types file
+
 > - (the same for each type of schedule)
 
 ```javascript
@@ -1225,20 +1229,19 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <div>
-       <Link style={{fontSize:18}}
+      <Link
+        style={{ fontSize: 18 }}
         data-testid="demo-button"
         to={`/schedule/`}
       >
         Go to demo...
       </Link>
       <h1>Go to Schedule view</h1>
-     
     </div>
   );
 };
 
 export default HomePage;
-
 ```
 
 ## :calendar: Calendar type view
@@ -1246,19 +1249,19 @@ export default HomePage;
 > This example is implemented with fake data for easily copy/paste in your project & adding more convenience for understanding the logic.
 
 > #### you can see the example code: [here](/examples/calendar_type/)
+
 ```javascript
 // App.tsx
 import { Suspense, useEffect, useState } from "react";
 import "../App.css";
 import { Route, Routes } from "react-router-dom";
 import { TcolorCellByEvents, TeventsName, TeventsTextColor } from "./dataTypes";
-import {EeventTypes, eventTypeData, scheduleByEventPlace } from "./eventData";
+import { EeventTypes, eventTypeData, scheduleByEventPlace } from "./eventData";
 import React from "react";
 import { useTheme } from "../theme/useTheme";
 import HomePage from "../HomePage";
 
 import Schedule from "react-simple-schedule-viewer";
-
 
 function App() {
   //  Variables for the Schedule component
@@ -1325,13 +1328,10 @@ function App() {
 }
 
 export default App;
-
-
-
 ```
 
+### The Typescript types file
 
-### The Typescript types file 
 > - (the same for each type of schedule)
 
 ```javascript
@@ -1459,28 +1459,29 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <div>
-       <Link style={{fontSize:18}}
+      <Link
+        style={{ fontSize: 18 }}
         data-testid="demo-button"
         to={`/schedule/`}
       >
         Go to demo...
       </Link>
       <h1>Go to Schedule view</h1>
-     
     </div>
   );
 };
 
 export default HomePage;
-
 ```
+
 ## Last precision
+
 > - You can combine all schedule types at the same time,
 > - if you want to see how, there is a link to the complex demo repository wich combine all schedules type together.
-![Full type image](demo/pictures/multi-schedule-types.png)
-> 
+>   ![Full type image](demo/pictures/multi-schedule-types.png)
 >
 > > [Link to the repository here](https://github.com/rodolphe37/simple-schedule-library-example)
+
 ---
 
 ## :pencil2: Contributing
@@ -1526,65 +1527,82 @@ Thank you! :heart:
 
 The MIT License.
 
-
 # My other projects:
 
->### react-wheel-time-picker
->https://www.npmjs.com/package/react-wheel-time-picker
+> ### react-wheel-time-picker
+>
+> https://www.npmjs.com/package/react-wheel-time-picker
 
->### My Simple Tutorial Creator
->https://github.com/rodolphe37/my-simple-tutorial-creator
+> ### My Simple Tutorial Creator
+>
+> https://github.com/rodolphe37/my-simple-tutorial-creator
 
->### My Simple Cam
->https://github.com/rodolphe37/my-simple-cam-dektop-app
+> ### My Simple Cam
+>
+> https://github.com/rodolphe37/my-simple-cam-dektop-app
 
->### My SimpleTasks Manager (software version for Linux, Mac & Windows)
->https://github.com/rodolphe37/my-simple-tasks-manager-desktop-version
+> ### My SimpleTasks Manager (software version for Linux, Mac & Windows)
+>
+> https://github.com/rodolphe37/my-simple-tasks-manager-desktop-version
 
->### QRCode Tools
->https://github.com/rodolphe37/qr-code-tools
+> ### QRCode Tools
+>
+> https://github.com/rodolphe37/qr-code-tools
 
->### App for decrypt greenPass europe QRcode
->https://github.com/rodolphe37/qrcode-decoder
+> ### App for decrypt greenPass europe QRcode
+>
+> https://github.com/rodolphe37/qrcode-decoder
 
->### Css animation with Create React App base.
->https://github.com/rodolphe37/halloween2021-bat-tuto-youtube-video
+> ### Css animation with Create React App base.
+>
+> https://github.com/rodolphe37/halloween2021-bat-tuto-youtube-video
 
->### My GitHub "open Sources" project
->https://github.com/rodolphe37/pwa-react-project
+> ### My GitHub "open Sources" project
+>
+> https://github.com/rodolphe37/pwa-react-project
 
->### cra-template-github-my-profile
->https://github.com/rodolphe37/cra-template-github-my-profile
+> ### cra-template-github-my-profile
+>
+> https://github.com/rodolphe37/cra-template-github-my-profile
 
->### My Awesome Custom Alert
->https://github.com/rodolphe37/my-awesome-custom-alert
+> ### My Awesome Custom Alert
+>
+> https://github.com/rodolphe37/my-awesome-custom-alert
 
->### Geolocation starter app React-native
->https://github.com/rodolphe37/react-native_geolocation-tracker
+> ### Geolocation starter app React-native
+>
+> https://github.com/rodolphe37/react-native_geolocation-tracker
 
->### Classic React Ultimate Messenger version repository (for open sources contributors)
->https://github.com/rodolphe37/rum-open-sources
+> ### Classic React Ultimate Messenger version repository (for open sources contributors)
+>
+> https://github.com/rodolphe37/rum-open-sources
 
->### React Ultimate Messenger template for React (create-react-app tools)
->https://github.com/rodolphe37/cra-react-ultimate-messenger
+> ### React Ultimate Messenger template for React (create-react-app tools)
+>
+> https://github.com/rodolphe37/cra-react-ultimate-messenger
 
->### PWA React Ultimate Messenger template for React (create-react-app tools)
->https://github.com/rodolphe37/cra-pwa-react-ultimate-messenger
+> ### PWA React Ultimate Messenger template for React (create-react-app tools)
+>
+> https://github.com/rodolphe37/cra-pwa-react-ultimate-messenger
 
->### installation and initialization shell script for the PWA React Ultimate Messenger template
->https://github.com/rodolphe37/pwa-rum-install-pack
+> ### installation and initialization shell script for the PWA React Ultimate Messenger template
+>
+> https://github.com/rodolphe37/pwa-rum-install-pack
 
->### Upload-image-profil-component
->https://github.com/rodolphe37/Upload-image-profil-component
+> ### Upload-image-profil-component
+>
+> https://github.com/rodolphe37/Upload-image-profil-component
 
->### Jeux libres de droits "open Sources" - Memory Yoga Cards Game - Sort the Waste Game - Match 3 Yoga Game - Tetris Classic Game - Remake Earth Puzzle Game
->https://github.com/rodolphe37/install-games-repository
+> ### Jeux libres de droits "open Sources" - Memory Yoga Cards Game - Sort the Waste Game - Match 3 Yoga Game - Tetris Classic Game - Remake Earth Puzzle Game
+>
+> https://github.com/rodolphe37/install-games-repository
 
->### Administration template - React JS & react-admin
->https://github.com/rodolphe37/nfc-updates-front
+> ### Administration template - React JS & react-admin
+>
+> https://github.com/rodolphe37/nfc-updates-front
 
-
->### Administration template Backend - Node & Express
->https://github.com/rodolphe37/nfc-updates-back
+> ### Administration template Backend - Node & Express
+>
+> https://github.com/rodolphe37/nfc-updates-back
 
 ---
