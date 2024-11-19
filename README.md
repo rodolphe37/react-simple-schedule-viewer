@@ -116,7 +116,7 @@
 ## Live demo
 
 > To see the live demo:
-> [Click here](https://steady-hamster-02673e.netlify.app/)
+> [Click here](https://verdant-mandazi-690985.netlify.app/)
 
 ---
 
