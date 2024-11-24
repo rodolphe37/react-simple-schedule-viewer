@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8072144d-3c0f-4ee2-8280-9af2fea236ff/deploy-status)](https://app.netlify.com/sites/verdant-mandazi-690985/deploys)
 
+[![react-simple-schedule-viewer](/advisor/npm-package/react-simple-schedule-viewer/badge.svg)](/advisor/npm-package/react-simple-schedule-viewer)
+
 # React simple schedule viewer
 
 ## 📅 An easy configurable react weekly Calendar viewer component.
