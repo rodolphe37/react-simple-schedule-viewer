@@ -14,7 +14,7 @@
 - **French & English** languages support
 - Schedule view with three types : **'event'**, **'temperature'** & **'calendar'**
 - made with react, react-router-dom, tailwindcss
-- The global state of the app is managed by recoil
+- The global state of the app is managed by jotai
 - All errors are catched and rendered a fallback UI with react-error-boundary
 
 ---
@@ -142,17 +142,17 @@ yarn add react-router-dom
   </BrowserRouter>
   ...
 ```
-- recoil & react-error-boundary are dev dependencies of the package, you need to install it first as dev dependencies in your app.
+- jotai & react-error-boundary are dev dependencies of the package, you need to install it first as dev dependencies in your app.
 
 >
 > for info:
-> - [recoil npm registry](https://www.npmjs.com/package/recoil)
+> - [Jotai documentation](https://jotai.org/docs)
 > - [react-error-boundary npm registry](https://www.npmjs.com/package/react-error-boundary)
 >
 
 
 ```bash
-yarn add -D recoil react-error-boundary
+yarn add -D jotai react-error-boundary
 ```
 ---
 
