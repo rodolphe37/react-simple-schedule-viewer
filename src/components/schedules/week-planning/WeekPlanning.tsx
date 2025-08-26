@@ -2,10 +2,10 @@ import { useState } from "react";
 import { EventType, TEventToDisplay } from "./models/models";
 import Calendar from "./components/Calendar";
 import eventIdToDIsplayAtom from "../../../globalStates/atoms/eventIdToDisplayAtom";
-import { useRecoilState } from "recoil";
 import { getSchedulesByEventPlaceIdResponse } from "../../../entities/schedules";
 import { TContentForModal, TeventsName, TeventTypeData } from "../types";
 import React from "react";
+import { useSetAtom } from "jotai";
 
 const WeekPlanning = ({
   scheduleIdentifier,
@@ -36,8 +36,7 @@ const WeekPlanning = ({
   eventsNameUs?: TeventsName;
   isInCalendarType: string | undefined;
 }) => {
-  const [, setEventIdToDisplay] =
-    useRecoilState<TEventToDisplay>(eventIdToDIsplayAtom);
+  const setEventIdToDisplay = useSetAtom(eventIdToDIsplayAtom);
   const [events, setEvents] = useState<EventType[] | undefined>();
 
   if (events === undefined && scheduleByEventPlace) {

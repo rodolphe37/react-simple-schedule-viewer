@@ -8,6 +8,8 @@ import useDispatchColorsByEvent from "../../hooks/useDispatchColorsByEvent";
 import { extractNumbers } from "../utils/helpers";
 import useEventNamesController from "../hooks/useEventNamesController";
 import React from "react";
+import { useAtom, useSetAtom } from "jotai";
+import eventIdToDisplayAtom from "../../../../globalStates/atoms/eventIdToDisplayAtom";
 
 const CellEvent = ({
   timeEvent: event,
@@ -17,7 +19,6 @@ const CellEvent = ({
   day,
   eventIdToDisplay,
   isInDarkMode,
-  setEventIdToDisplay,
   eventTypeData,
   locale,
   modalContent,
@@ -30,6 +31,7 @@ const CellEvent = ({
 }: CellEventProps) => {
   const { eventInstructionNameFr, eventInstructionNameUs } =
     useEventNamesController({ eventsName, eventsNameUs });
+  const setEventIdToDisplay = useSetAtom(eventIdToDisplayAtom);
   const { colorCellByTemp, textEventColorInCell } = useDispatchColorsByEvent({
     colorCellByEvents,
     eventsTextColor,
@@ -102,7 +104,6 @@ const CellEvent = ({
   const numbersForCalendarType = extractNumbers(stringToExtract);
 
   const isFrenchDegree = locale == "fr" ? ` °C` : ` °F`;
-
 
   return (
     <>

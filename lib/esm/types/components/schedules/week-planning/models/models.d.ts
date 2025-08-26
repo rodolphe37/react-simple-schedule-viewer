@@ -1,5 +1,4 @@
 /// <reference types="react" />
-import { SetterOrUpdater } from "recoil";
 import { TContentForModal, TeventsName, TeventTypeData } from "../../types";
 export interface EventType {
     id: string;
@@ -29,7 +28,6 @@ export interface CellEventProps {
     startTime: number;
     day: number;
     eventIdToDisplay: TEventToDisplay;
-    setEventIdToDisplay: SetterOrUpdater<TEventToDisplay>;
     isInDarkMode?: boolean;
     eventTypeData: TeventTypeData;
     locale: "fr" | "en";

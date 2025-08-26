@@ -1,4 +1,4 @@
-import { atom } from "recoil";
+import { atom } from "jotai";
 
 type TEventToDisplay = {
   day: undefined | number;
@@ -7,14 +7,6 @@ type TEventToDisplay = {
   endTime: number | undefined;
 };
 
-const eventIdToDIsplayAtom = atom<TEventToDisplay>({
-  key: "eventIdToDIsplayAtom",
-  default: {
-    day: undefined,
-    id: undefined,
-    startTime: undefined,
-    endTime: undefined,
-  },
-});
+const eventIdToDisplayAtom = atom<TEventToDisplay | null>(null);
 
-export default eventIdToDIsplayAtom;
+export default eventIdToDisplayAtom;

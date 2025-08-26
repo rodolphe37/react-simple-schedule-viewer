@@ -2,10 +2,10 @@ import { convertH2M, rangebyFifteenMinutes } from "../utils/helpers";
 import CellEvent from "./CellEvent";
 import HoursGuidelines from "./HoursGuidelines";
 import { CellProps, TEventToDisplay } from "../models/models";
-import { useRecoilState } from "recoil";
 import eventIdToDIsplayAtom from "../../../../globalStates/atoms/eventIdToDisplayAtom";
 import { EventTypes } from "../../types";
 import React from "react";
+import { useAtom } from "jotai";
 
 const Cell = ({
   day,
@@ -23,8 +23,7 @@ const Cell = ({
   eventsName,
   eventsNameUs,
 }: CellProps) => {
-  const [eventIdToDisplay, setEventIdToDisplay] =
-    useRecoilState<TEventToDisplay>(eventIdToDIsplayAtom);
+  const [eventIdToDisplay, setEventIdToDisplay] = useAtom(eventIdToDIsplayAtom);
 
   const eventTypesByScheduleId = events?.filter(
     (res) => res.id === scheduleIdentifier
@@ -76,8 +75,7 @@ const Cell = ({
                             locale={locale}
                             eventTypeData={eventTypeData}
                             isInDarkMode={isInDarkMode}
-                            eventIdToDisplay={eventIdToDisplay}
-                            setEventIdToDisplay={setEventIdToDisplay}
+                            eventIdToDisplay={eventIdToDisplay!}
                             timeEvent={timeEvent}
                             timeEventId={idx}
                             day={result.day}

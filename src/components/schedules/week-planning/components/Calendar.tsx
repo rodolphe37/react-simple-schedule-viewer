@@ -62,14 +62,17 @@ const Calendar = ({
     useGetDaysController(calendarData);
 
   const currentDay = today.getDate();
-  const actualDate = currentDay < 10 ? `0${currentDay}` : `${currentDay}`
-  const currentNumber = calendarWithDaysFrench.find((res)=> res.includes(actualDate))
-  const currentUsNumber = calendarWithDaysUS.find((res)=> res.includes(actualDate))
+  const actualDate = currentDay < 10 ? `0${currentDay}` : `${currentDay}`;
+  const currentNumber = calendarWithDaysFrench.find((res) =>
+    res.includes(actualDate)
+  );
+  const currentUsNumber = calendarWithDaysUS.find((res) =>
+    res.includes(actualDate)
+  );
   const currentDayOfWeek =
     locale === "fr"
-      ? calendarWithDaysFrench.find((res)=> res === currentNumber)
-      : calendarWithDaysUS.find((res)=> res === currentUsNumber);
-
+      ? calendarWithDaysFrench.find((res) => res === currentNumber)
+      : calendarWithDaysUS.find((res) => res === currentUsNumber);
 
   return (
     <ScrollProvider
@@ -174,7 +177,7 @@ const Calendar = ({
                 locale={locale}
                 isInDarkMode={isInDarkMode}
                 rangebyFifteenMinutes={rangebyFifteenMinutes}
-                eventIdToDisplay={eventIdToDisplay}
+                eventIdToDisplay={eventIdToDisplay!}
               />
               {sortedEventsDaySlotArray?.map((res, i) => (
                 <Fragment key={i}>

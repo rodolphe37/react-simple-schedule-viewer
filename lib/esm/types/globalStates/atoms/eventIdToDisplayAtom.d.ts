@@ -4,6 +4,8 @@ type TEventToDisplay = {
     startTime: number | undefined;
     endTime: number | undefined;
 };
-declare const eventIdToDIsplayAtom: import("recoil").RecoilState<TEventToDisplay>;
-export default eventIdToDIsplayAtom;
+declare const eventIdToDisplayAtom: import("jotai").PrimitiveAtom<TEventToDisplay | null> & {
+    init: TEventToDisplay | null;
+};
+export default eventIdToDisplayAtom;
 //# sourceMappingURL=eventIdToDisplayAtom.d.ts.map
